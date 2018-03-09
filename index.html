@@ -13,12 +13,41 @@
     <!-- Firebase -->
     <script src="https://www.gstatic.com/firebasejs/4.10.1/firebase.js"></script>
     <!-- css link -->
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<!-- Firebase Link -->
+	<script src="https://www.gstatic.com/firebasejs/4.11.0/firebase.js"></script>
+	
     <title>Hello, world!</title>
   </head>
   <body>
-    <h1>Hello, world!</h1>
+	<h1>Hello, world!</h1>
+	
+</head>
+<style>
+	.hide {
+		visibility: hidden;
+	}
+</style>
+<body>
+<div class="container">
+	<input type="email" id="txtEmail" placeholder="Email">
+
+	<input type="password" id="txtPassword" placeholder="Password">
+
+	<button class="btn btn-action" id="btnLogin">
+		Log In
+	</button>
+	<button class="btn btn-secondary" id="btnSignUp">
+		Sign Up
+	</button>
+	<button class="btn btn-action hide" id="btnLogout">
+		Log Out
+	</button>
+	<br>
+	<button class="btn btn-danger" id="btnAnony">
+		Sign In Anonymously
+	</button>
+</div>
 
     
     <!-- Optional JavaScript -->
