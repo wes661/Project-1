@@ -14,3 +14,26 @@ $('#carousel').carousel({
 })
 
 
+
+// $("#recipeSearch").on("click", function () {
+//     // var s3 = $("#ingredient3").val().trim();
+//     // var s2 = $("#ingredient2").val().trim();
+//     var s1 = $("#ingredient1").val().trim();
+
+//     console.log(s1);
+//     // console.log(s2);
+//     // console.log(s3);
+
+
+// })
+var newId = 2;
+$("#addMore").on("click", function () {
+    var newForm = $(".input-group");
+
+    if (newId != 6) {
+        newForm.prepend('<input type="text"class="form-control" id=ingredient' + newId + ' placeholder="Additional Ingredient"/>');
+        newId++;
+        console.log(newId);
+    }
+ 
+})
