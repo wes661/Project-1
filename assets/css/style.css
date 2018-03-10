@@ -1,9 +1,29 @@
-.carouselImg {
-    height: 200px;
-    width: auto;
+.carouselWrap {
+    margin-top: 150px;
+    margin-bottom: 100px;
+    position: absolute;
+    z-index: 0;
 }
-#carousel{
-    margin-top: 300px;
-    margin-bottom: 300px;
-    height: 400px;
+.carousel-inner{
+    height: 500px;
+    width: 100%;
+    border-top: rgba(0, 0, 0, 0.616) 5px solid;
+    border-bottom: rgba(0, 0, 0, 0.616) 5px solid;
+   
 }
+.mainSearch {
+    position: absolute !important;
+    top: 45%;
+    padding-left: 200px !important;
+    padding-right: 200px !important;
+    
+}
+.input-group{
+
+z-index: 2;
+border-radius: 10px;
+    width: 250px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.623), 0 6px 20px 0 rgba(0, 0, 0, 0.623);
+    text-align: center;
+}
+
