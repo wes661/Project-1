@@ -9,4 +9,8 @@ var config = {
 };
 firebase.initializeApp(config);
 
+$('.carousel').carousel({
+    interval: 2000
+})
+
 
