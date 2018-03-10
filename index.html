@@ -10,44 +10,21 @@
 	
     <!-- font awesome -->
     <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+
     <!-- Firebase -->
     <script src="https://www.gstatic.com/firebasejs/4.10.1/firebase.js"></script>
-    <!-- css link -->
-	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+    <!-- Css link -->
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+  
 	<!-- Firebase Link -->
 	<script src="https://www.gstatic.com/firebasejs/4.11.0/firebase.js"></script>
-	
-    <title>Hello, world!</title>
+
+    <title>Project 1</title>
   </head>
   <body>
-	<h1>Hello, world!</h1>
 	
-</head>
-<style>
-	.hide {
-		visibility: hidden;
-	}
-</style>
-<body>
-<div class="container">
-	<input type="email" id="txtEmail" placeholder="Email">
 
-	<input type="password" id="txtPassword" placeholder="Password">
-
-	<button class="btn btn-action" id="btnLogin">
-		Log In
-	</button>
-	<button class="btn btn-secondary" id="btnSignUp">
-		Sign Up
-	</button>
-	<button class="btn btn-action hide" id="btnLogout">
-		Log Out
-	</button>
-	<br>
-	<button class="btn btn-danger" id="btnAnony">
-		Sign In Anonymously
-	</button>
-</div>
 
     
     <!-- Optional JavaScript -->
@@ -57,6 +34,22 @@
     crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-	<script src="assets/javascript/app.js"></script>
+	
+
+	<script>
+	// Initialize Firebase
+	var config = {
+    apiKey: "AIzaSyBduDTXB2PTUnzWhxbVATEwjbyLYMjgPf0",
+    authDomain: "cdc-project-1.firebaseapp.com",
+    databaseURL: "https://cdc-project-1.firebaseio.com",
+    projectId: "cdc-project-1",
+    storageBucket: "cdc-project-1.appspot.com",
+    messagingSenderId: "701148576356"
+  };
+  firebase.initializeApp(config);
+	</script>
+
+<script src="assets/javascript/auth.js"></script>
+<script src="assets/javascript/app.js"></script>
   </body>
 </html>
