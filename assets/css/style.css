@@ -41,6 +41,7 @@ body {
     line-height: 30px;
     background-color: #f5f5f52c;
     text-align: center;
+    
 }
 header {
 	text-align: center;
@@ -65,4 +66,5 @@ h1 {
 	font-size: 150px !important;
 	margin-bottom: -30px !important;
 }
+
 
