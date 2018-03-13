@@ -15,9 +15,12 @@ body {
 .carousel-inner{
     height: 500px;
     width: 100%;
-    border-top: rgba(0, 0, 0, 0.384) 5px solid;
     border-bottom: rgba(0, 0, 0, 0.384) 5px solid;
    
+}
+.carouselImg{
+    border-top: rgba(0, 0, 0, 0.384) 5px solid;
+    border-bottom: rgba(0, 0, 0, 0.384) 5px solid;
 }
 .mainSearch {
     position: absolute !important;
@@ -65,6 +68,23 @@ h1 {
 	font-family: 'Dancing Script', cursive !important;
 	font-size: 150px !important;
 	margin-bottom: -30px !important;
+}
+/* Tooltip on plus main page*/
+.tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: rgba(0, 0, 0, 0.582);
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+    position: absolute;
+    z-index: 4;
+    top: -40px;
+    left: 81%;
+}
+#addMore:hover .tooltiptext {
+    visibility: visible;
 }
 
 
