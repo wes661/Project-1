@@ -1,21 +1,22 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <!-- Required meta tags -->
+<!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!-- Bootstrap CSS -->
+<!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <!-- font awesome -->
+<!-- font awesome -->
     <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
-    <!-- Firebase -->
+<!-- Firebase -->
     <script src="https://www.gstatic.com/firebasejs/4.10.1/firebase.js"></script>
-    <!-- Css link -->
+<!-- Css link -->
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-    <!-- Firebase Link -->
+<!-- Firebase Link -->
     <script src="https://www.gstatic.com/firebasejs/4.11.0/firebase.js"></script>
-    <!-- Google API  -->
+<!-- Google API  -->
     <script src="https://apis.google.com/js/platform.js" async defer></script>
+<!-- font -->
     <link href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet">
     <title>Food Project</title>
   </head>
@@ -26,12 +27,13 @@
       </div>
     </header>
 
-      <!-- main carousel -->
-  <div class="carouselWrap">
+<!-- main carousel -->
+  <div class="carouselWrap col-xs-12">
         <div class="container-fluid mainSearch">
           <div class="input-group">
-            <input type="text" class="form-control" id="ingredient1" placeholder="Enter Ingredient">
+            <input type="text" class="form-control col-xs-8" id="ingredient1" placeholder="Enter Ingredient">
             <button type="button" class="btn btn-default" id="addMore" data-toggle="dropdown" aria-expanded="false">
+              <span class="tooltiptext">Add More!</span>
               <span class="plus">&#43;</span>
             </button>
             <div class="input-group-append">
@@ -39,38 +41,36 @@
             </div>
           </div>
         </div>
-  <div id="carousel" class="carousel slide" data-ride="carousel">
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <img class="d-block w-100 carouselImg" src="assets/images/pic1.jpg"  alt="First slide">
-      </div>
-      <div class="carousel-item">
-        <img class="d-block w-100 carouselImg" src="assets/images/pic2.jpg"  alt="Second slide">
-      </div>
-      <div class="carousel-item">
-        <img class="d-block w-100 carouselImg" src="assets/images/pic3.jpg"  alt="Third slide">
-      </div>
-      <div class="carousel-item">
-        <img class="d-block w-100 carouselImg" src="assets/images/pic4.jpg"  alt="Fourth slide">
-      </div>
-      <div class="carousel-item">
-        <img class="d-block w-100 carouselImg" src="assets/images/pic5.jpg"  alt="Fifth slide">
+    <div id="carousel" class="carousel slide" data-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img class="d-block w-100 carouselImg" src="assets/images/pic1.jpg"  alt="First slide">
+        </div>
+        <div class="carousel-item">
+          <img class="d-block w-100 carouselImg" src="assets/images/pic2.jpg"  alt="Second slide">
+        </div>
+        <div class="carousel-item">
+          <img class="d-block w-100 carouselImg" src="assets/images/pic3.jpg"  alt="Third slide">
+        </div>
+        <div class="carousel-item">
+          <img class="d-block w-100 carouselImg" src="assets/images/pic4.jpg"  alt="Fourth slide">
+        </div>
+        <div class="carousel-item">
+          <img class="d-block w-100 carouselImg" src="assets/images/pic5.jpg"  alt="Fifth slide">
+        </div>
       </div>
     </div>
   </div>
-  </div>
 
+<!-- footer with copyright info -->
   <footer class="footer">
     <div class="container">
       <span class="text-muted">&#169 Patrick Marrin, Joey Bridges, Corey Richard, Wesley Hanson - 2018</span>
     </div>
   </footer>
-
-
-
-      <!-- Jquery Link -->
+<!-- Jquery Link -->
       <script src="http://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
-      <!-- bootstrap js -->
+<!-- bootstrap js -->
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ"
         crossorigin="anonymous">
       <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n"
@@ -79,10 +79,8 @@
         crossorigin="anonymous"></script>
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"
         crossorigin="anonymous"></script>
-      <!-- local js file Link -->
-      <!-- <script src="assets/javascript/auth.js"></script> -->
+<!-- local js file Link -->
+<!-- <script src="assets/javascript/auth.js"></script> -->
       <script src="assets/javascript/app.js"></script>
-
   </body>
-
 </html>
