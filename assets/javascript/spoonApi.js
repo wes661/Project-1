@@ -1,7 +1,7 @@
 // key
 // c4YgIGcU8WmshZ3ig1VyeaajeldQp1cNxb7jsnu5l0L2zf7GbS
 
-// apples%2Cflour%2Csugar //way to typw multiple ingredients
+// apples%2Cflour%2Csugar //way to type multiple ingredients
 
 // Url
 //spoonacular-recipe-food-nutrition-v1.p.mashape.com
@@ -9,21 +9,12 @@
         
 $("#recipeSearch").on("click", function(e) {
     e.preventDefault();
-
-    console.log("working");
     
-    let search = (search1 + "+" + search2 + "+" + search3 + "+" + search4 + "+" + search5);
+    let search = (search1 + "%2C" + search2 + "%2C" + search3 + "%2C" + search4 + "%2C" + search5);
     console.log(search);
+    
 
-   
-    // let search = (search1);
-
-    //recipe search url
-    let queryUrl = "https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/search?number=1&offset=0&query=" + search;
-
-    //recipe for title
-    // let queryUrl = "https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/extract?forceExtraction=false&url=http%3A%2F%2Fwww.melskitchencafe.com%2Fthe-best-fudgy-brownies%2F";
-
+    let queryUrl = 'https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/random?limitLicense=false&number=1&tags=' + search;
 
     $.ajax({
       url: queryUrl,
@@ -38,4 +29,4 @@ $("#recipeSearch").on("click", function(e) {
 
   });
 
-});   
+});  
