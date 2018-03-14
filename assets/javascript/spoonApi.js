@@ -11,12 +11,14 @@ $("#recipeSearch").on("click", function(e) {
     e.preventDefault();
 
     console.log("working");
+    
+    let search = search1
 
    
     // let search = (search1);
 
     //recipe search url
-    let queryUrl = "https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/search?number=1&offset=0&query=" + search1;
+    let queryUrl = "https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/search?number=1&offset=0&query=" + search;
 
     //recipe for title
     // let queryUrl = "https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/extract?forceExtraction=false&url=http%3A%2F%2Fwww.melskitchencafe.com%2Fthe-best-fudgy-brownies%2F";

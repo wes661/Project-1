@@ -10,6 +10,11 @@ var config = {
 firebase.initializeApp(config);
 var database = firebase.database();
 
+let search1 = "";
+let search2 = "";
+let search3 = "";
+let search4 = "";
+let search5 = "";
 
 // main carousel speed // 
 $('#carousel').carousel({
@@ -19,22 +24,22 @@ $('#carousel').carousel({
 var newId = 2;
 // on click for searching // 
 $("#recipeSearch").on("click", function () {
-    let search1 = $("#ingredient1").val().trim();
+    search1 = $("#ingredient1").val().trim();
     console.log("first ingredient: " + search1)
     if (newID = 3) {
-        var search2 = $("#ingredient2").val(); 
+        search2 = $("#ingredient2").val(); 
         console.log("second ingredient: " + search2);
     } 
     if (newID = 4) {
-        var search3 = $("#ingredient3").val();
+        search3 = $("#ingredient3").val();
         console.log("third ingredient: " + search3);
     } 
     if (newID = 5) { 
-        var search4 = $("#ingredient4").val();
+        search4 = $("#ingredient4").val();
         console.log("fourth ingredient: " + search4);
     } 
     if (newID = 6) {
-        var search5 = $("#ingredient5").val();
+        search5 = $("#ingredient5").val();
         console.log("fifth ingredient: " + search5);
     }
 })
