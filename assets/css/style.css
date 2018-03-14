@@ -133,4 +133,37 @@ h1 {
     box-shadow: 0 32px 32px 0 rgba(0, 0, 0, 0.801), 0 6px 20px 0 rgba(0, 0, 0, 0.623);
 }
 
+div.modal-content {
+    position: fixed;
+    height: 500px;
+    width: 164%;
+    margin-left: -155px;
+    margin-bottom: 200px;
+    border: 0.5px solid black;
+}
 
+div.modal-header {
+    border: 0.5px solid black;
+}
+
+div.modal-body {
+    border: 0.5px solid black;
+    height: 100px;
+} 
+
+div.modal-footer {
+    border: 0.5px solid black;
+}
+
+#map {
+
+}
+
+#mapBtn {
+
+}
+
+label {
+    display: inline-block;
+    margin-bottom: .5rem;
+}
