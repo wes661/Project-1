@@ -39,7 +39,7 @@ $("#recipeSearch").on("click", function () {
         console.log("fourth ingredient: " + search4);
     } 
     if (newID = 6) {
-        search5 = $("#ingredient5").val();
+        var search5 = $("#ingredient5");
         console.log("fifth ingredient: " + search5);
     }
 })

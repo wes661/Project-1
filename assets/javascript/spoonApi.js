@@ -13,6 +13,7 @@ $("#recipeSearch").on("click", function(e) {
     console.log("working");
     
     let search = (search1 + "+" + search2 + "+" + search3 + "+" + search4 + "+" + search5);
+    console.log(search);
 
    
     // let search = (search1);
@@ -33,13 +34,7 @@ $("#recipeSearch").on("click", function(e) {
   }).then(function(response) {
 
     console.log(response);
-    console.log(response.results[0].image);
     
-    let picSrc = response.results[0].image;
-
-    let image = $("<image>");
-    image.attr("src", picSrc);
-    $("#picDiv").append(image);
 
   });
 
