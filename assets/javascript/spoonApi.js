@@ -12,7 +12,7 @@ $("#recipeSearch").on("click", function(e) {
     
     let search = (search1 + "%2C" + search2 + "%2C" + search3 + "%2C" + search4 + "%2C" + search5);
     console.log(search);
-    
+
 
     let queryUrl = 'https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/random?limitLicense=false&number=1&tags=' + search;
 
@@ -24,7 +24,23 @@ $("#recipeSearch").on("click", function(e) {
         }
   }).then(function(response) {
 
+    let recipes = response.recipes;
+
     console.log(response);
+
+    
+
+    for ( let i = 0; i < response.recipes.length; i++) {
+      console.log(recipes[i]);
+      console.log(recipes[i].image);
+
+      let picImg = $("<img>");
+      picImg.addClass("img-fluid");
+      picImg.attr("src", recipes[i].image);
+
+    }
+
+    
     
 
   });
