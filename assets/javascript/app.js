@@ -10,6 +10,7 @@ var config = {
 firebase.initializeApp(config);
 var database = firebase.database();
 
+
 // main carousel speed // 
 $('#carousel').carousel({
     interval: 5000
@@ -18,7 +19,7 @@ $('#carousel').carousel({
 var newId = 2;
 // on click for searching // 
 $("#recipeSearch").on("click", function () {
-    var search1 = $("#ingredient1").val().trim();
+    let search1 = $("#ingredient1").val().trim();
     console.log("first ingredient: " + search1)
     if (newID = 3) {
         var search2 = $("#ingredient2").val(); 

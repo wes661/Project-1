@@ -7,8 +7,10 @@
 //spoonacular-recipe-food-nutrition-v1.p.mashape.com
         
         
-$("#button").on("click", function(e) {
+$("#recipeSearch").on("click", function(e) {
     e.preventDefault();
+
+    console.log("working");
 
    
     // let search = (search1);
@@ -19,7 +21,6 @@ $("#button").on("click", function(e) {
     //recipe for title
     // let queryUrl = "https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/extract?forceExtraction=false&url=http%3A%2F%2Fwww.melskitchencafe.com%2Fthe-best-fudgy-brownies%2F";
 
-    console.log(ingredients);
 
     $.ajax({
       url: queryUrl,
@@ -40,4 +41,4 @@ $("#button").on("click", function(e) {
 
   });
 
-});
+});   
