@@ -51,6 +51,7 @@ $("#addMore").on("click", function () {
         newId++;
     }
 })
+
 // Initialize Map //
 var map;
 var infoWindow;
