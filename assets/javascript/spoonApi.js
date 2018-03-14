@@ -33,10 +33,23 @@ $("#recipeSearch").on("click", function(e) {
     for ( let i = 0; i < response.recipes.length; i++) {
       console.log(recipes[i]);
       console.log(recipes[i].image);
+      console.log(recipes[i].title);
 
-      let picImg = $("<img>");
-      picImg.addClass("img-fluid");
-      picImg.attr("src", recipes[i].image);
+      let recipeTitle = recipes[i].title
+
+      let cardTitle = $("<h2>");
+      cardTitle.addClass("text-center card-header col-md-3");
+      cardTitle.text(recipeTitle);
+      $("#test").prepend(cardTitle);
+
+
+      let cardImg= $("<img>");
+      cardImg.addClass("img-fluid card-body");
+      cardImg.attr("src", recipes[i].image);
+      $("#test").append(cardImg);
+
+
+
 
     }
 
