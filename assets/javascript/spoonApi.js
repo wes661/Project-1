@@ -12,7 +12,7 @@ $("#recipeSearch").on("click", function(e) {
 
     console.log("working");
     
-    let search = search1
+    let search = (search1 + "+" + search2 + "+" + search3 + "+" + search4 + "+" + search5);
 
    
     // let search = (search1);
