@@ -14,7 +14,7 @@ $("#recipeSearch").on("click", function(e) {
     console.log(search);
 
 
-    let queryUrl = 'https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/random?limitLicense=false&number=1&tags=' + search;
+    let queryUrl = 'https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/random?limitLicense=false&number=3&tags=' + search;
 
     $.ajax({
       url: queryUrl,
@@ -37,16 +37,20 @@ $("#recipeSearch").on("click", function(e) {
 
       let recipeTitle = recipes[i].title
 
-      let cardTitle = $("<h2>");
-      cardTitle.addClass("text-center card-header col-md-3");
+      let cardDiv = $("<div>");
+      cardDiv.addClass(" text-center  col-md-3");
+      $("#test").append(cardDiv);
+
+      let cardTitle = $("<h3>");
+      cardTitle.addClass("card-header");
       cardTitle.text(recipeTitle);
-      $("#test").prepend(cardTitle);
+      cardDiv.append(cardTitle);
 
 
       let cardImg= $("<img>");
       cardImg.addClass("img-fluid card-body");
       cardImg.attr("src", recipes[i].image);
-      $("#test").append(cardImg);
+      cardDiv.append(cardImg);
 
 
 
