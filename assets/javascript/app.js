@@ -21,19 +21,19 @@ $("#recipeSearch").on("click", function () {
     var search1 = $("#ingredient1").val().trim();
     console.log("first ingredient: " + search1)
     if (newID = 3) {
-        var search2 = $("#ingredient2").val().trim(); 
+        var search2 = $("#ingredient2").val(); 
         console.log("second ingredient: " + search2);
     } 
     if (newID = 4) {
-        var search3 = $("#ingredient3").val().trim();
+        var search3 = $("#ingredient3").val();
         console.log("third ingredient: " + search3);
     } 
     if (newID = 5) { 
-        var search4 = $("#ingredient4").val().trim();
+        var search4 = $("#ingredient4").val();
         console.log("fourth ingredient: " + search4);
     } 
     if (newID = 6) {
-        var search5 = $("#ingredient5").val().trim();
+        var search5 = $("#ingredient5").val();
         console.log("fifth ingredient: " + search5);
     }
 })

@@ -10,16 +10,11 @@
 $("#button").on("click", function(e) {
     e.preventDefault();
 
-    let ingredient1 = ($("#ingredient1").val().trim());
-    let ingredient2 = ("+" + $("#ingredient2").val().trim());
-    let ingredient3 = ("+" + $("#ingredient3").val().trim());
-    let ingredient4 = ("+" + $("#ingredient4").val().trim());
-    let ingredient5 = ("+" + $("#ingredient5").val().trim());
-    let ingredient6 = ("+" + $("#ingredient6").val().trim());
-    let ingredients = (ingredient1 + ingredient2 + ingredient3 + ingredient4 + ingredient5 + ingredient6);
+   
+    // let search = (search1);
 
     //recipe search url
-    let queryUrl = "https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/search?number=1&offset=0&query=" + ingredients;
+    let queryUrl = "https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/search?number=1&offset=0&query=" + search1;
 
     //recipe for title
     // let queryUrl = "https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/extract?forceExtraction=false&url=http%3A%2F%2Fwww.melskitchencafe.com%2Fthe-best-fudgy-brownies%2F";
