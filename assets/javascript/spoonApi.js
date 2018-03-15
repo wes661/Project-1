@@ -1,8 +1,7 @@
 // key
 // c4YgIGcU8WmshZ3ig1VyeaajeldQp1cNxb7jsnu5l0L2zf7GbS
-
-// apples%2Cflour%2Csugar //way to type multiple ingredients
-
+//way to type multiple ingredients
+// apples%2Cflour%2Csugar
 // Url
 //spoonacular-recipe-food-nutrition-v1.p.mashape.com
         
@@ -11,8 +10,6 @@ $("#recipeSearch").on("click", function(e) {
     e.preventDefault();
     
     let search = (search1 + "%2C" + search2 + "%2C" + search3 + "%2C" + search4 + "%2C" + search5);
-
-
     let queryUrl = 'https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/random?limitLicense=false&number=1&tags=' + search;
 
     $.ajax({
@@ -27,7 +24,6 @@ $("#recipeSearch").on("click", function(e) {
     let number = 1
 
     for ( let i = 0; i < response.recipes.length; i++) {
-
       console.log(response);
 
       // variables for cards
@@ -35,24 +31,22 @@ $("#recipeSearch").on("click", function(e) {
       let recipeImage = recipes[i].image;
       let recipeLikes = recipes[i].aggregateLikes;
       let cookTime = recipes[i].readyInMinutes;
-
-      //variable for lightbox
       let instructions = recipes[i].instructions;
-
+      let url = recipes[i].sourceUrl;
+      //loop for ingredients
       let ingredients = [];
       let ingredientsArr = recipes[i].extendedIngredients;
+
       for(let n = 0; n < ingredientsArr.length; n++) {
         ingredients.push(ingredientsArr[n].name);
       }
-      
-
       //variables for diets
-      let dietsArr = recipes[i].diets;
       let diets = [];
+      let dietsArr = recipes[i].diets;
+
       for(let j = 0; j < dietsArr.length; j++) {
         diets.push(dietsArr[j]);
       }
-
 
       database.ref("recipeCards/recipe" + number).set({
         title: recipeTitle,
@@ -61,11 +55,11 @@ $("#recipeSearch").on("click", function(e) {
         time: cookTime,
         instructions: instructions,
         ingredients: ingredients,
-        diets: diets
+        diets: diets,
+        url: url
       });
 
-      number++;
-      
+      number++; 
     }
   });
 });
@@ -102,8 +96,5 @@ database.ref("recipeCards").on('value', function(snapshot) {
   $("#recipePic7").attr("src", recipe7Picture);
   $("#recipePic8").attr("src", recipe8Picture);
   $("#recipePic9").attr("src", recipe9Picture);
-
-
-  
 });
 
