@@ -167,3 +167,9 @@ label {
     display: inline-block;
     margin-bottom: .5rem;
 }
+
+.truncate {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

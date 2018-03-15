@@ -42,7 +42,15 @@ $("#recipeSearch").on("click", function () {
         var search5 = $("#ingredient5");
         console.log("fifth ingredient: " + search5);
     }
-})
+});
+
+function secondPageLoad() {
+
+    setTimeout(function() {
+        window.location.href='index2.html'
+    }, 3000)
+};
+
 // on click for adding more search fields // 
 $("#addMore").on("click", function () {
     var newForm = $(".input-group");
