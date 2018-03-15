@@ -135,35 +135,45 @@ h1 {
 
 div.modal-content {
     position: fixed;
-    height: 500px;
-    width: 164%;
-    margin-left: -155px;
-    margin-bottom: 200px;
+    height: auto;
     border: 0.5px solid black;
+    margin-top: 50px;
 }
 
 div.modal-header {
     border: 0.5px solid black;
+    
 }
 
 div.modal-body {
     border: 0.5px solid black;
-    height: 100px;
+    height: 300px;
+   
 } 
 
 div.modal-footer {
     border: 0.5px solid black;
+    
 }
 
 #map {
-
+    height: 300px;
+    display: none; 
+    width: 100%;
+    background: white;
+}
+#miles {
+    width: 13%;
 }
 
 #mapBtn {
 
 }
 
-label {
-    display: inline-block;
-    margin-bottom: .5rem;
+.searchStores {
+    
 }
+label {
+    margin-right: 144px;
+}
+

@@ -130,10 +130,11 @@ function createMarkers(places) {
 //Get user location and radius of stores    
 $(document).ready(function(){
     console.log('running');
-    $('#getStores').on('click', function(){
+    $('#mapBtn').on('click', function(){
+        $("#map").slideDown(2000);
         var rad = 4828.03;
-        if($('#radiusInput').val() != 0){
-            rad = $('#radiusInput').val()*1609.34;
+        if($('#miles').val() != 0){
+            rad = $('#miles').val()*1609.34;
         }
         generateMap(['grocery', 'store'], rad);
     })
