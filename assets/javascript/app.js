@@ -25,22 +25,17 @@ var newId = 2;
 // on click for searching // 
 $("#recipeSearch").on("click", function () {
     search1 = $("#ingredient1").val().trim();
-    console.log("first ingredient: " + search1)
     if (newID = 3) {
         search2 = $("#ingredient2").val(); 
-        console.log("second ingredient: " + search2);
     } 
     if (newID = 4) {
         search3 = $("#ingredient3").val();
-        console.log("third ingredient: " + search3);
     } 
     if (newID = 5) { 
         search4 = $("#ingredient4").val();
-        console.log("fourth ingredient: " + search4);
     } 
     if (newID = 6) {
         var search5 = $("#ingredient5");
-        console.log("fifth ingredient: " + search5);
     }
 });
 
@@ -50,6 +45,21 @@ function secondPageLoad() {
         window.location.href='index2.html'
     }, 3000)
 };
+
+
+
+
+
+$(".recipe-btn").on("click", function(){
+    setTimeout(function(){
+        $('div.modal, div.fade, div.bd-example-modal-lg').modal('show');
+    }, 1000);
+
+})
+
+    
+ 
+
 
 function loading() {
     $("#spin").show();
@@ -142,10 +152,12 @@ function createMarkers(places) {
 
 //Get user location and radius of stores    
 $(document).ready(function(){
-    $('#getStores').on('click', function(){
+
+    $('#mapBtn').on('click', function(){
+        $("#map").slideDown(2000);
         var rad = 4828.03;
-        if($('#radiusInput').val() != 0){
-            rad = $('#radiusInput').val()*1609.34;
+        if($('#miles').val() != 0){
+            rad = $('#miles').val()*1609.34;
         }
         generateMap(['grocery', 'store'], rad);
     })
