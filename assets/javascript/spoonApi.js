@@ -32,25 +32,25 @@ $("#recipeSearch").on("click", function(e) {
 
       // variables for cards
       let recipeTitle = recipes[i].title
-      console.log(recipeTitle);
       let recipeImage = recipes[i].image;
       let recipeLikes = recipes[i].aggregateLikes;
-      console.log(recipeLikes);
       let cookTime = recipes[i].readyInMinutes;
-      console.log(cookTime);
 
       //variable for lightbox
       let instructions = recipes[i].instructions;
-      console.log(instructions);
+
+      let ingredients = [];
       let ingredientsArr = recipes[i].extendedIngredients;
       for(let n = 0; n < ingredientsArr.length; n++) {
-        console.log(ingredientsArr[n].name);
+        ingredients.push(ingredientsArr[n].name);
       }
+      
 
       //variables for diets
       let dietsArr = recipes[i].diets;
+      let diets = [];
       for(let j = 0; j < dietsArr.length; j++) {
-        console.log(dietsArr[j]);
+        diets.push(dietsArr[j]);
       }
 
 
@@ -59,8 +59,9 @@ $("#recipeSearch").on("click", function(e) {
         picture: recipeImage,
         likes: recipeLikes,
         time: cookTime,
-        instructions: instructions
-
+        instructions: instructions,
+        ingredients: ingredients,
+        diets: diets
       });
 
       number++;
