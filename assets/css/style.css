@@ -173,3 +173,7 @@ label {
     overflow: hidden;
     text-overflow: ellipsis;
 }
+
+#spin {
+    display: none;
+}

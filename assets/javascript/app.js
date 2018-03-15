@@ -51,6 +51,11 @@ function secondPageLoad() {
     }, 3000)
 };
 
+function loading() {
+    $("#spin").show();
+    $("#spin").addClass("fa-spin");
+}
+
 // on click for adding more search fields // 
 $("#addMore").on("click", function () {
     var newForm = $(".input-group");
