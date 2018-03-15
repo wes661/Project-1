@@ -14,7 +14,7 @@ $("#recipeSearch").on("click", function(e) {
     console.log(search);
 
 
-    let queryUrl = 'https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/random?limitLicense=false&number=3&tags=' + search;
+    let queryUrl = 'https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/random?limitLicense=false&number=1&tags=' + search;
 
     $.ajax({
       url: queryUrl,
