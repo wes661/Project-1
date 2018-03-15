@@ -26,40 +26,41 @@ $("#recipeSearch").on("click", function(e) {
 
     let recipes = response.recipes;
 
-    console.log(response);
-
-    
-
     for ( let i = 0; i < response.recipes.length; i++) {
       console.log(recipes[i]);
       console.log(recipes[i].image);
       console.log(recipes[i].title);
 
       let recipeTitle = recipes[i].title
-
-      let cardDiv = $("<div>");
-      cardDiv.addClass(" text-center  col-md-3");
-      $("#test").append(cardDiv);
-
-      let cardTitle = $("<h3>");
-      cardTitle.addClass("card-header");
-      cardTitle.text(recipeTitle);
-      cardDiv.append(cardTitle);
+      let recipeImage = recipes[i].image
 
 
-      let cardImg= $("<img>");
-      cardImg.addClass("img-fluid card-body");
-      cardImg.attr("src", recipes[i].image);
-      cardDiv.append(cardImg);
-
-
-
-
+      database.ref("recipeCards").push({
+        title: recipeTitle,
+        picture: recipeImage
+      });
+      
     }
-
-    
-    
-
   });
+});
 
-});  
+
+
+
+
+
+
+      // let cardDiv = $("<div>");
+      // cardDiv.addClass(" text-center  col-md-3");
+      // $("#test").append(cardDiv);
+
+      // let cardTitle = $("<h3>");
+      // cardTitle.addClass("card-header");
+      // cardTitle.text(recipeTitle);
+      // cardDiv.append(cardTitle);
+
+
+      // let cardImg= $("<img>");
+      // cardImg.addClass("img-fluid card-body");
+      // cardImg.attr("src", recipes[i].image);
+      // cardDiv.append(cardImg);
