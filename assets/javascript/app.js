@@ -51,6 +51,21 @@ function secondPageLoad() {
     }, 3000)
 };
 
+
+
+
+
+$(".recipe-btn").on("click", function(){
+    setTimeout(function(){
+        $('div.modal, div.fade, div.bd-example-modal-lg').modal('show');
+    }, 3000);
+
+})
+
+    
+ 
+
+
 function loading() {
     $("#spin").show();
     $("#spin").addClass("fa-spin");
@@ -142,7 +157,8 @@ function createMarkers(places) {
 
 //Get user location and radius of stores    
 $(document).ready(function(){
-    $('#getStores').on('click', function(){
+
+    $('#mapBtn').on('click', function(){
         $("#map").slideDown(2000);
         var rad = 4828.03;
         if($('#miles').val() != 0){
