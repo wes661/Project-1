@@ -157,6 +157,7 @@ function createMarkers(places) {
 
 //Get user location and radius of stores    
 $(document).ready(function(){
+
     $('#mapBtn').on('click', function(){
         $("#map").slideDown(2000);
         var rad = 4828.03;

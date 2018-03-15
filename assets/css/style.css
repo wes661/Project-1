@@ -134,6 +134,7 @@ h1 {
 }
 
 div.modal-content {
+
     position: absolute;
     height: auto;
     border: 0.5px solid black;
@@ -149,7 +150,11 @@ div.modal-header {
 
 div.modal-body {
     border: 0.5px solid black;
+
     height: auto;
+
+  
+
    
 } 
 
@@ -159,18 +164,16 @@ div.modal-footer {
 }
 
 #map {
+
     height: 200px;
     display: none; 
     width: 100%;
     background: white;
 }
 #miles {
+
     width: 15%;
 }
-
-
-
-
 
 
 .truncate {
