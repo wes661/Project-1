@@ -42,7 +42,20 @@ $("#recipeSearch").on("click", function () {
         var search5 = $("#ingredient5");
         console.log("fifth ingredient: " + search5);
     }
-})
+});
+
+function secondPageLoad() {
+
+    setTimeout(function() {
+        window.location.href='index2.html'
+    }, 3000)
+};
+
+function loading() {
+    $("#spin").show();
+    $("#spin").addClass("fa-spin");
+}
+
 // on click for adding more search fields // 
 $("#addMore").on("click", function () {
     var newForm = $(".input-group");
@@ -129,8 +142,7 @@ function createMarkers(places) {
 
 //Get user location and radius of stores    
 $(document).ready(function(){
-    console.log('running');
-    $('#mapBtn').on('click', function(){
+    $('#getStores').on('click', function(){
         $("#map").slideDown(2000);
         var rad = 4828.03;
         if($('#miles').val() != 0){

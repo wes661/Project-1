@@ -177,3 +177,12 @@ label {
     margin-right: 144px;
 }
 
+.truncate {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#spin {
+    display: none;
+}
