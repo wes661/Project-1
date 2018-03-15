@@ -98,3 +98,9 @@ database.ref("recipeCards").on('value', function(snapshot) {
   $("#recipePic9").attr("src", recipe9Picture);
 });
 
+$(".truncate").on("click", function(e) {
+  e.preventDefault();
+
+  
+})
+

@@ -53,7 +53,7 @@ function secondPageLoad() {
 $(".recipe-btn").on("click", function(){
     setTimeout(function(){
         $('div.modal, div.fade, div.bd-example-modal-lg').modal('show');
-    }, 3000);
+    }, 1000);
 
 })
 
