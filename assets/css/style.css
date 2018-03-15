@@ -109,7 +109,7 @@ h1 {
     box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.801), 0 6px 20px 0 rgba(0, 0, 0, 0.623);
     
 }
-.receipe-btn {
+.recipe-btn {
     width: 100%;
     background-color: rgba(51, 51, 51, 0.815) !important;
     position: absolute;
@@ -134,39 +134,44 @@ h1 {
 }
 
 div.modal-content {
-    position: fixed;
-    height: 500px;
-    width: 164%;
-    margin-left: -155px;
-    margin-bottom: 200px;
+    position: absolute;
+    height: auto;
     border: 0.5px solid black;
+    margin-top: 50px;
 }
+
+
 
 div.modal-header {
     border: 0.5px solid black;
+    
 }
 
 div.modal-body {
     border: 0.5px solid black;
-    height: 100px;
+    height: auto;
+   
 } 
 
 div.modal-footer {
     border: 0.5px solid black;
+    
 }
 
 #map {
-
+    height: 200px;
+    display: none; 
+    width: 100%;
+    background: white;
+}
+#miles {
+    width: 15%;
 }
 
-#mapBtn {
 
-}
 
-label {
-    display: inline-block;
-    margin-bottom: .5rem;
-}
+
+
 
 .truncate {
     white-space: nowrap;
