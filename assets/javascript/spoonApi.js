@@ -11,7 +11,6 @@ $("#recipeSearch").on("click", function(e) {
     e.preventDefault();
     
     let search = (search1 + "%2C" + search2 + "%2C" + search3 + "%2C" + search4 + "%2C" + search5);
-    console.log(search);
 
 
     let queryUrl = 'https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/random?limitLicense=false&number=1&tags=' + search;
@@ -31,17 +30,37 @@ $("#recipeSearch").on("click", function(e) {
 
       console.log(response);
 
+      // variables for cards
       let recipeTitle = recipes[i].title
-      let recipeImage = recipes[i].image
+      console.log(recipeTitle);
+      let recipeImage = recipes[i].image;
       let recipeLikes = recipes[i].aggregateLikes;
-      let recipeCookTime = recipe[i].cookingMinutes;
-      let diary = recipe[i].diaryFree;
-      let diets = recipe[i].diets;
+      console.log(recipeLikes);
+      let cookTime = recipes[i].readyInMinutes;
+      console.log(cookTime);
+
+      //variable for lightbox
+      let instructions = recipes[i].instructions;
+      console.log(instructions);
+      let ingredientsArr = recipes[i].extendedIngredients;
+      for(let n = 0; n < ingredientsArr.length; n++) {
+        console.log(ingredientsArr[n].name);
+      }
+
+      //variables for diets
+      let dietsArr = recipes[i].diets;
+      for(let j = 0; j < dietsArr.length; j++) {
+        console.log(dietsArr[j]);
+      }
 
 
       database.ref("recipeCards/recipe" + number).set({
         title: recipeTitle,
-        picture: recipeImage
+        picture: recipeImage,
+        likes: recipeLikes,
+        time: cookTime,
+        instructions: instructions
+
       });
 
       number++;
@@ -51,8 +70,6 @@ $("#recipeSearch").on("click", function(e) {
 });
 
 database.ref("recipeCards").on('value', function(snapshot) {
-
-  console.log(snapshot.val().recipe1.title);
 
   let recipe1Picture = snapshot.val().recipe1.picture;
   let recipe2Picture = snapshot.val().recipe2.picture;
