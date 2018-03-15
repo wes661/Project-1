@@ -129,7 +129,6 @@ function createMarkers(places) {
 
 //Get user location and radius of stores    
 $(document).ready(function(){
-    console.log('running');
     $('#getStores').on('click', function(){
         var rad = 4828.03;
         if($('#radiusInput').val() != 0){
