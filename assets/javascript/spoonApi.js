@@ -83,30 +83,10 @@ database.ref("recipeCards").on('value', function(snapshot) {
   let recipe8Picture = snapshot.val().recipe8.picture;
   let recipe9Picture = snapshot.val().recipe9.picture;
 
-  for(let i = 1; i < snapshot.length; i++) {
-    $("#basicModal-" + 1).html(snapshot.val()['recipe' + 1].title);
-    $("#recipePic1").attr("src", snapshot.val()['recipe' + 1].picture);
+  for(let i = 1; i < 10; i++) {
+    $("#basicModal-" + i).html(snapshot.val()['recipe' + i].title);
+    $("#recipePic" + i).attr("src", snapshot.val()['recipe' + i].picture);
   }
-  
-  
-  // $("#basicModal-2").html(snapshot.val().recipe2.title);
-  // $("#basicModal-3").html(snapshot.val().recipe3.title);
-  // $("#basicModal-4").html(snapshot.val().recipe4.title);
-  // $("#basicModal-5").html(snapshot.val().recipe5.title);
-  // $("#basicModal-6").html(snapshot.val().recipe6.title);
-  // $("#basicModal-7").html(snapshot.val().recipe7.title);
-  // $("#basicModal-8").html(snapshot.val().recipe8.title);
-  // $("#basicModal-9").html(snapshot.val().recipe9.title);
-
-  // $("#recipePic1").attr("src", snapshot.val()['recipe' + 1].picture);
-  // $("#recipePic2").attr("src", recipe2Picture);
-  // $("#recipePic3").attr("src", recipe3Picture);
-  // $("#recipePic4").attr("src", recipe4Picture);
-  // $("#recipePic5").attr("src", recipe5Picture);
-  // $("#recipePic6").attr("src", recipe6Picture);
-  // $("#recipePic7").attr("src", recipe7Picture);
-  // $("#recipePic8").attr("src", recipe8Picture);
-  // $("#recipePic9").attr("src", recipe9Picture);
 });
 
 $(".truncate").on("click", function(e) {
