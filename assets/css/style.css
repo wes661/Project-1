@@ -261,9 +261,13 @@ div.modal-footer {
 #title {
     font-family: 'Abril Fatface', cursive;
 }
-#list, #instructions {
+#list, #instructions, #css-likes {
     font-family: 'Tinos', serif;
 }
 #instructions {
     clear: left;
+}
+#cook-time,  #diets{
+    font-size: 1.25em;
+    font-family: 'Tinos', serif;
 }
