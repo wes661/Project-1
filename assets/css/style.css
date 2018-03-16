@@ -264,3 +264,6 @@ div.modal-footer {
 #list, #instructions {
     font-family: 'Tinos', serif;
 }
+#instructions {
+    clear: left;
+}
