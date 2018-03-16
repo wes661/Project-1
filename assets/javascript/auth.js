@@ -1,6 +1,8 @@
 
 const auth = firebase.auth();
 
+let key = "";
+
 const txtEmail = document.querySelector("#txtEmail");
 const txtPassword = document.querySelector("#txtPassword");
 const btnLogin = document.querySelector("#btnLogin");
@@ -68,9 +70,13 @@ auth.onAuthStateChanged(firebaseUser => {
         console.log(firebaseUser);
         $("#btnLogout").show();
         $("#btnLogin, #btnSignUp, #txtEmail, #txtPassword").hide();
+        key = firebaseUser.uid;
+        console.log(key);
     } else {
         console.log('not logged in');
         $("#btnLogin, #btnSignUp").show();
     }
 });
+
+
 

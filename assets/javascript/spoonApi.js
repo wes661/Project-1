@@ -54,7 +54,7 @@ $("#recipeSearch").on("click", function (e) {
         diets.push(dietsArr[j]);
       }
 
-      database.ref("recipeCards/recipe" + number).set({
+      database.ref("/recipeCards/recipe" + number).set({
         title: recipeTitle,
         picture: recipeImage,
         likes: recipeLikes,
@@ -73,25 +73,10 @@ $("#recipeSearch").on("click", function (e) {
 
 database.ref("recipeCards").on('value', function (snapshot) {
 
-  //  let recipe1Picture = snapshot.val().recipe1.picture;
-  let recipe2Picture = snapshot.val().recipe2.picture;
-  let recipe3Picture = snapshot.val().recipe3.picture;
-  let recipe4Picture = snapshot.val().recipe4.picture;
-  let recipe5Picture = snapshot.val().recipe5.picture;
-  let recipe6Picture = snapshot.val().recipe6.picture;
-  let recipe7Picture = snapshot.val().recipe7.picture;
-  let recipe8Picture = snapshot.val().recipe8.picture;
-  let recipe9Picture = snapshot.val().recipe9.picture;
 
   for (let i = 1; i < 10; i++) {
     $("#basicModal-" + i).html(snapshot.val()['recipe' + i].title);
     $("#recipePic" + i).attr("src", snapshot.val()['recipe' + i].picture);
   }
 });
-
-$(".truncate").on("click", function (e) {
-  e.preventDefault();
-
-
-})
 
