@@ -7,12 +7,13 @@ body {
     z-index: 0;
 }
 h1 {
-    text-shadow: 0 10px 10px #050505;
+    text-shadow: 0 20px 20px #050505;
 }
 .carouselWrap {
     margin-top: 175px;
     margin-bottom: 50px;
-    position: absolute;
+    padding: 0px !important;
+    position: relative;
     z-index: 0;
     box-shadow: 0 32px 32px 0 rgba(0, 0, 0, 0.801), 0 6px 20px 0 rgba(0, 0, 0, 0.623);
 }
@@ -27,9 +28,10 @@ h1 {
 }
 .mainSearch {
     position: absolute !important;
-    top: 45%;
-    padding-left: 150px !important;
-    padding-right: 150px !important;
+    top: 55%;
+    left: 10%;
+    margin:auto;
+    max-width: 80%;
     
 }
 .input-group{
@@ -132,56 +134,37 @@ h1 {
     border: none !important;
     box-shadow: 0 32px 32px 0 rgba(0, 0, 0, 0.801), 0 6px 20px 0 rgba(0, 0, 0, 0.623);
 }
-
 div.modal-content {
-
     position: absolute;
     height: auto;
     border: 0.5px solid black;
     margin-top: 50px;
 }
-
-
-
 div.modal-header {
-    border: 0.5px solid black;
-    
+    border: 0.5px solid black;   
 }
-
 div.modal-body {
     border: 0.5px solid black;
-
     height: auto;
-
-  
-
-   
 } 
 
 div.modal-footer {
     border: 0.5px solid black;
-    
 }
-
 #map {
-
     height: 200px;
     display: none; 
     width: 100%;
     background: white;
 }
 #miles {
-
     width: 15%;
 }
-
-
 .truncate {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
 }
-
 #spin {
     display: none;
 }
@@ -193,4 +176,33 @@ div.modal-footer {
 }
 .secondSearch {
     margin-top: -30px !important;
+}
+.favBtn {
+    box-shadow: 0 22px 22px 0 rgba(0, 0, 0, 0.801), 0 6px 20px 0 rgba(0, 0, 0, 0.623);
+    position: absolute !important;
+    top: 61%;
+    left: 10%;
+    margin:auto;
+    border-radius: 5px;
+}
+@media only screen and (max-width: 600px) {
+    .favBtn {
+        box-shadow: 0 22px 22px 0 rgba(0, 0, 0, 0.801), 0 6px 20px 0 rgba(0, 0, 0, 0.623);
+        position: absolute !important;
+        top: 54%;
+        left: 10%;
+        margin:auto;
+        border-radius: 5px;
+    }
+    .mainSearch {
+        position: absolute !important;
+        top: 48%;
+        left: 10%;
+        margin:auto;
+        max-width: 80%;
+        
+}
+}
+.modal-content{ 
+   background: url("../images/wallpaper.png"); 
 }
