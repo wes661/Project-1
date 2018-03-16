@@ -206,3 +206,10 @@ div.modal-footer {
 .modal-content{ 
    background: url("../images/wallpaper.png"); 
 }
+.favoriteText{
+    font-family: 'Dancing Script', cursive !important;
+    color: white;
+    font-size: 4em;
+    text-shadow: 0 20px 20px #050505;
+    padding-left:25%;
+}
