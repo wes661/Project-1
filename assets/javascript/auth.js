@@ -56,6 +56,15 @@ function signUp() {
         const password = txtPassword.value;
         //sign in
         const promise = auth.createUserWithEmailAndPassword(email, password);
+        promise.catch(e => alert(e.message));
+    });
+
+    btnLogin.addEventListener("click", e => {
+        //get email and password
+        const email = txtEmail.value;
+        const password = txtPassword.value;
+        //sign in
+        const promise = auth.signInWithEmailAndPassword(email, password);
         promise.catch(e => console.log(e.message));
     });
 };
