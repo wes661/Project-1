@@ -1,8 +1,7 @@
 // key
 // c4YgIGcU8WmshZ3ig1VyeaajeldQp1cNxb7jsnu5l0L2zf7GbS
-
-// apples%2Cflour%2Csugar //way to type multiple ingredients
-
+//way to type multiple ingredients
+// apples%2Cflour%2Csugar
 // Url
 //spoonacular-recipe-food-nutrition-v1.p.mashape.com
         
@@ -11,10 +10,11 @@ $("#recipeSearch").on("click", function(e) {
     e.preventDefault();
     
     let search = (search1 + "%2C" + search2 + "%2C" + search3 + "%2C" + search4 + "%2C" + search5);
-    console.log(search);
-
 
     let queryUrl = 'https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/random?limitLicense=false&number=1&tags=' + search;
+
+    // let queryUrl = "https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/838902/nutritionWidget?defaultCss=true"
+    // let queryUrl = "https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/guessNutrition?title=Spaghetti+Aglio+et+Olio"
 
     $.ajax({
       url: queryUrl,
@@ -23,36 +23,55 @@ $("#recipeSearch").on("click", function(e) {
         xhr.setRequestHeader('X-Mashape-Key', 'c4YgIGcU8WmshZ3ig1VyeaajeldQp1cNxb7jsnu5l0L2zf7GbS');
         }
   }).then(function(response) {
+    console.log(response);
 
     let recipes = response.recipes;
     let number = 1
 
     for ( let i = 0; i < response.recipes.length; i++) {
+      
 
-      console.log(response);
-
+      // variables for cards
       let recipeTitle = recipes[i].title
-      let recipeImage = recipes[i].image
+      let recipeImage = recipes[i].image;
       let recipeLikes = recipes[i].aggregateLikes;
-      let recipeCookTime = recipe[i].cookingMinutes;
-      let diary = recipe[i].diaryFree;
-      let diets = recipe[i].diets;
+      let cookTime = recipes[i].readyInMinutes;
+      let instructions = recipes[i].instructions;
+      let url = recipes[i].sourceUrl;
+      //loop for ingredients
+      let ingredients = [];
+      let ingredientsArr = recipes[i].extendedIngredients;
+      let id = recipes[i].id;
 
+      for(let n = 0; n < ingredientsArr.length; n++) {
+        ingredients.push(ingredientsArr[n].name);
+      }
+      //variables for diets
+      let diets = [];
+      let dietsArr = recipes[i].diets;
+
+      for(let j = 0; j < dietsArr.length; j++) {
+        diets.push(dietsArr[j]);
+      }
 
       database.ref("recipeCards/recipe" + number).set({
         title: recipeTitle,
-        picture: recipeImage
+        picture: recipeImage,
+        likes: recipeLikes,
+        time: cookTime,
+        instructions: instructions,
+        ingredients: ingredients,
+        diets: diets,
+        url: url,
+        id: id
       });
 
-      number++;
-      
+      number++; 
     }
   });
 });
 
 database.ref("recipeCards").on('value', function(snapshot) {
-
-  console.log(snapshot.val().recipe1.title);
 
   let recipe1Picture = snapshot.val().recipe1.picture;
   let recipe2Picture = snapshot.val().recipe2.picture;
@@ -84,8 +103,11 @@ database.ref("recipeCards").on('value', function(snapshot) {
   $("#recipePic7").attr("src", recipe7Picture);
   $("#recipePic8").attr("src", recipe8Picture);
   $("#recipePic9").attr("src", recipe9Picture);
+});
 
+$(".truncate").on("click", function(e) {
+  e.preventDefault();
 
   
-});
+})
 
