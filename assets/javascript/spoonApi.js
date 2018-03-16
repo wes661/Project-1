@@ -36,6 +36,7 @@ $("#recipeSearch").on("click", function(e) {
       //loop for ingredients
       let ingredients = [];
       let ingredientsArr = recipes[i].extendedIngredients;
+      let id = recipes[i].id;
 
       for(let n = 0; n < ingredientsArr.length; n++) {
         ingredients.push(ingredientsArr[n].name);
@@ -56,7 +57,8 @@ $("#recipeSearch").on("click", function(e) {
         instructions: instructions,
         ingredients: ingredients,
         diets: diets,
-        url: url
+        url: url,
+        id: id
       });
 
       number++; 
