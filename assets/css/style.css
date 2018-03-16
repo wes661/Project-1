@@ -193,11 +193,11 @@ div.modal-footer {
     font-size: .3em;
 }
 #addFav{
-    color: red;
+    color: gold;
     font-size: 30px;
     position: absolute;
     bottom: 75%;
-    left: 90%;
+    left: 86%;
     text-shadow: 5px 5px 5px black;
 }
 #addFav:hover{
