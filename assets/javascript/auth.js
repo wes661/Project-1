@@ -62,6 +62,7 @@ function signUp() {
 
 btnLogout.addEventListener('click', e => {
     auth.signOut();
+    $("#btnLogout").hide();
 });
 
 // add a realtime listener
