@@ -25,69 +25,89 @@
 
 <body>
     <div class="container wrapper">
+        <div class="input-group secondSearch">
+            <input type="text" class="form-control col-xs-8" id="ingredient1" placeholder="Enter New Ingredients">
+            <button type="button" class="btn btn-default" id="addMore" data-toggle="dropdown" aria-expanded="false">
+                <span class="plus">&#43;</span>
+            </button>
+            <div class="input-group-append">
+                <!--  -->
+                <button class="btn btn-dark" id="recipeSearch" type="button">New Search
+                    <i class="fa fa-spinner" id="spin"> </i>
+                </button>
+            </div>
+        </div>
+        <br>
         <div class="card col-12 mainCard">
         <div class="row text-center inner2 ">
         <div class="card col-12 col-lg-3 card-pad">
-            <img class="card-img-top" id="recipePic1" alt="Card image cap">
+            <img class="card-img-top" id="recipePic1" alt="">
             <div class="card-body">
-                <a href="#!" class="btn btn-primary recipe-btn truncate" data-target=".bd-example-modal-lg" id="basicModal-1">Title Goes Here</a>
+                <a href="#!" class="btn btn-primary recipe-btn truncate" data-target=".bd-example-modal-lg" id="basicModal-1"></a>
             </div>
         </div>
         <div class="card col-12 col-lg-3 card-pad">
-            <img class="card-img-top" id="recipePic2"  src="assets/images/test.jpg" alt="Card image cap">
+            <img class="card-img-top" id="recipePic2"  src="" alt="">
             <div class="card-body">
-                <a href="#!" class="btn btn-primary recipe-btn  truncate" data-target=".bd-example-modal-lg" id="basicModal-2">Title Goes Here</a>
+                <a href="#!" class="btn btn-primary recipe-btn  truncate" data-target=".bd-example-modal-lg" id="basicModal-2"></a>
             </div>
         </div>
         <div class="card col-12 col-lg-3 card-pad">
-            <img class="card-img-top" id="recipePic3"  src="assets/images/test.jpg" alt="Card image cap">
+            <img class="card-img-top" id="recipePic3"  src="" alt="">
             <div class="card-body">
-                <a href="#!" class="btn btn-primary recipe-btn truncate" data-target=".bd-example-modal-lg" id="basicModal-3">Title Goes Here</a>
+                <a href="#!" class="btn btn-primary recipe-btn truncate" data-target=".bd-example-modal-lg" id="basicModal-3"></a>
             </div>
         </div>
         </div>
         <div class="row text-center inner2">
             <div class="card col-12 col-lg-3 card-pad">
-                <img class="card-img-top" id="recipePic4" src="assets/images/test.jpg" alt="Card image cap">
+                <img class="card-img-top" id="recipePic4" src="" alt="">
                 <div class="card-body">
-                    <a href="#!" class="btn btn-primary recipe-btn truncate" data-target=".bd-example-modal-lg" id="basicModal-4">Title Goes Here</a>
+                    <a href="#!" class="btn btn-primary recipe-btn truncate" data-target=".bd-example-modal-lg" id="basicModal-4"></a>
                 </div>
             </div>
             <div class="card col-12 col-lg-3 card-pad">
-                <img class="card-img-top" id="recipePic5"  src="assets/images/test.jpg" alt="Card image cap">
+                <img class="card-img-top" id="recipePic5"  src="" alt="">
                 <div class="card-body">
-                    <a href="#!" class="btn btn-primary recipe-btn truncate" data-target=".bd-example-modal-lg" id="basicModal-5">Title Goes Here</a>
+                    <a href="#!" class="btn btn-primary recipe-btn truncate" data-target=".bd-example-modal-lg" id="basicModal-5"></a>
                 </div>
             </div>
             <div class="card col-12 col-lg-3 card-pad">
-                <img class="card-img-top" id="recipePic6"  src="assets/images/test.jpg" alt="Card image cap">
+                <img class="card-img-top" id="recipePic6"  src="" alt="">
                 <div class="card-body">
-                    <a href="#!" class="btn btn-primary recipe-btn truncate" data-target=".bd-example-modal-lg" id="basicModal-6">Title Goes Here</a>
+                    <a href="#!" class="btn btn-primary recipe-btn truncate" data-target=".bd-example-modal-lg" id="basicModal-6"></a>
                 </div>
             </div>
         </div>
         <div class="row text-center inner2">
             <div class="card col-12 col-lg-3 card-pad">
-                <img class="card-img-top" id="recipePic7"  src="assets/images/test.jpg" alt="Card image cap">
+                <img class="card-img-top" id="recipePic7"  src="" alt="">
                 <div class="card-body">
-                    <a href="#!" class="btn btn-primary recipe-btn truncate" data-target=".bd-example-modal-lg" id="basicModal-7">Title Goes Here</a>
+                    <a href="#!" class="btn btn-primary recipe-btn truncate" data-target=".bd-example-modal-lg" id="basicModal-7"></a>
                 </div>
             </div>
             <div class="card col-12 col-lg-3 card-pad">
-                <img class="card-img-top" id="recipePic8"  src="assets/images/test.jpg" alt="Card image cap">
+                <img class="card-img-top" id="recipePic8"  src="" alt="">
                 <div class="card-body">
-                    <a href="#!" class="btn btn-primary recipe-btn truncate" data-target=".bd-example-modal-lg" id="basicModal-8">Title Goes Here</a>
+                    <a href="#!" class="btn btn-primary recipe-btn truncate" data-target=".bd-example-modal-lg" id="basicModal-8"></a>
                 </div>
             </div>
             <div class="card col-12 col-lg-3 card-pad">
-                <img class="card-img-top" id="recipePic9"  src="assets/images/test.jpg" alt="Card image cap">
+                <img class="card-img-top" id="recipePic9"  src="" alt="">
                 <div class="card-body">
-                    <a href="#!" class="btn btn-primary recipe-btn truncate" data-target=".bd-example-modal-lg" id="basicModal-9">Title Goes Here</a>
+                    <a href="#!" class="btn btn-primary recipe-btn truncate" data-target=".bd-example-modal-lg" id="basicModal-9"></a>
                 </div>
             </div>
         </div>
         </div>
     </div>
+    <div class="container">
+
+        <button class="btn btn-dark moreResults" id="moreResults" onclick="secondPageLoad();loading();" type="button">More Results
+            <i class="fa fa-spinner" id="spin"> </i>
+        </button>
+    </div>
+
 
       <!-- Large modal -->
     
