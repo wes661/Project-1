@@ -11,7 +11,9 @@ $(".recipe-btn").on("click", function () {
         $("#diets").text(data.val().diets);
         $("#image").attr("src", data.val().picture);
         $("#instructions").text(data.val().instructions);
-        $("#url").html(data.val().url);
+        let modalUrl = $("<a>Official Recipe</a>");
+        modalUrl.attr("href", data.val().url);
+        $("#url").html(modalUrl);
 
 
         for (let i = 0; i < data.val().ingredients.length; i++) {
