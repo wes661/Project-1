@@ -203,3 +203,6 @@ div.modal-footer {
         
 }
 }
+.modal-content{ 
+   background: url("../images/wallpaper.png"); 
+}
