@@ -4,32 +4,32 @@
 // apples%2Cflour%2Csugar
 // Url
 //spoonacular-recipe-food-nutrition-v1.p.mashape.com
-        
-        
-$("#recipeSearch").on("click", function(e) {
-    e.preventDefault();
-    
-    let search = (search1 + "%2C" + search2 + "%2C" + search3 + "%2C" + search4 + "%2C" + search5);
 
-    let queryUrl = 'https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/random?limitLicense=false&number=1&tags=' + search;
 
-    // let queryUrl = "https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/838902/nutritionWidget?defaultCss=true"
-    // let queryUrl = "https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/guessNutrition?title=Spaghetti+Aglio+et+Olio"
+$("#recipeSearch").on("click", function (e) {
+  e.preventDefault();
 
-    $.ajax({
-      url: queryUrl,
-      method: "GET",
-      beforeSend: function(xhr){
-        xhr.setRequestHeader('X-Mashape-Key', 'c4YgIGcU8WmshZ3ig1VyeaajeldQp1cNxb7jsnu5l0L2zf7GbS');
-        }
-  }).then(function(response) {
+  let search = (search1 + "%2C" + search2 + "%2C" + search3 + "%2C" + search4 + "%2C" + search5);
+
+  let queryUrl = 'https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/random?limitLicense=false&number=1&tags=' + search;
+
+  // let queryUrl = "https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/838902/nutritionWidget?defaultCss=true"
+  // let queryUrl = "https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/guessNutrition?title=Spaghetti+Aglio+et+Olio"
+
+  $.ajax({
+    url: queryUrl,
+    method: "GET",
+    beforeSend: function (xhr) {
+      xhr.setRequestHeader('X-Mashape-Key', 'c4YgIGcU8WmshZ3ig1VyeaajeldQp1cNxb7jsnu5l0L2zf7GbS');
+    }
+  }).then(function (response) {
     console.log(response);
 
     let recipes = response.recipes;
     let number = 1
 
-    for ( let i = 0; i < response.recipes.length; i++) {
-      
+    for (let i = 0; i < response.recipes.length; i++) {
+
 
       // variables for cards
       let recipeTitle = recipes[i].title
@@ -43,14 +43,14 @@ $("#recipeSearch").on("click", function(e) {
       let ingredientsArr = recipes[i].extendedIngredients;
       let id = recipes[i].id;
 
-      for(let n = 0; n < ingredientsArr.length; n++) {
+      for (let n = 0; n < ingredientsArr.length; n++) {
         ingredients.push(ingredientsArr[n].name);
       }
       //variables for diets
       let diets = [];
       let dietsArr = recipes[i].diets;
 
-      for(let j = 0; j < dietsArr.length; j++) {
+      for (let j = 0; j < dietsArr.length; j++) {
         diets.push(dietsArr[j]);
       }
 
@@ -66,14 +66,14 @@ $("#recipeSearch").on("click", function(e) {
         id: id
       });
 
-      number++; 
+      number++;
     }
   });
 });
 
-database.ref("recipeCards").on('value', function(snapshot) {
+database.ref("recipeCards").on('value', function (snapshot) {
 
-//  let recipe1Picture = snapshot.val().recipe1.picture;
+  //  let recipe1Picture = snapshot.val().recipe1.picture;
   let recipe2Picture = snapshot.val().recipe2.picture;
   let recipe3Picture = snapshot.val().recipe3.picture;
   let recipe4Picture = snapshot.val().recipe4.picture;
@@ -83,15 +83,15 @@ database.ref("recipeCards").on('value', function(snapshot) {
   let recipe8Picture = snapshot.val().recipe8.picture;
   let recipe9Picture = snapshot.val().recipe9.picture;
 
-  for(let i = 1; i < 10; i++) {
+  for (let i = 1; i < 10; i++) {
     $("#basicModal-" + i).html(snapshot.val()['recipe' + i].title);
     $("#recipePic" + i).attr("src", snapshot.val()['recipe' + i].picture);
   }
 });
 
-$(".truncate").on("click", function(e) {
+$(".truncate").on("click", function (e) {
   e.preventDefault();
 
-  
+
 })
 

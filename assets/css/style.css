@@ -253,3 +253,14 @@ div.modal-footer {
 #list {
     float: right;
 }
+
+.modal-text {
+    color: #333;
+
+}
+#title {
+    font-family: 'Abril Fatface', cursive;
+}
+#list, #instructions {
+    font-family: 'Tinos', serif;
+}
