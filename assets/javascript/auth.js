@@ -33,6 +33,16 @@ function signIn() {
         const promise = auth.signInWithEmailAndPassword(email, password);
         promise.catch(e => console.log(e.message));
     });
+
+    btnSignUp.addEventListener("click", e => {
+        //get email and password
+        //TODO   check 4 real email
+        const email = txtEmail.value;
+        const password = txtPassword.value;
+        //sign in
+        const promise = auth.createUserWithEmailAndPassword(email, password);
+        promise.catch(e => console.log(e.message));
+    });
 };
 
 function signUp() {
