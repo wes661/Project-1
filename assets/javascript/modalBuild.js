@@ -17,14 +17,19 @@ $(".recipe-btn").on("click", function () {
 
 
         let modalImage = $("<img>");
-        modalImage.addClass("img-fluid col-8");
+        modalImage.addClass("img-fluid col-12");
         modalImage.attr("src", data.val().picture);
         row.append(modalImage);
 
-        let modalingredients = $("<p>");
-        modalingredients.addClass("col-4");
-        modalingredients.text(data.val().ingredients);
-        row.append(modalingredients);
+        for (let i = 0; i < data.val().ingredients.length; i++) {
+            let div = $("<div>");
+            let ul = $("<ul>");
+            let li = $("<li>");
+            li.text(data.val().ingredients[i]);
+            ul.append(li);
+            div.append(ul);
+            row.append(div);
+        }
 
         modalCard.append(row);
 
