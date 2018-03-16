@@ -271,3 +271,11 @@ div.modal-footer {
     font-size: 1.25em;
     font-family: 'Tinos', serif;
 }
+#auth {
+    position: relative;
+    top: 10%;
+    left: 30%;
+}
+.hide {
+    visibility: hidden;
+}
