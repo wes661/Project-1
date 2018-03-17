@@ -23,7 +23,6 @@ $(".recipe-btn").on("click", function () {
             ul.append(li);
             $("#list").append(ul);
         };
-        console.log(data.val().instructionList)
 
         let ol = $("<ol>");
         for (let x = 0; x < data.val().instructionList.length; x++) {
