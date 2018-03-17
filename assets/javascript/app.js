@@ -43,7 +43,7 @@ function secondPageLoad() {
 
     setTimeout(function () {
         window.location.href = 'index2.html'
-    }, 3000)
+    }, 5000)
 };
 $(".recipe-btn").on("click", function () {
     setTimeout(function () {
@@ -83,7 +83,7 @@ function generateMap(kw, rad) {
                     scaledSize: new google.maps.Size(48, 48)
                 }
             });
-            
+
             infoWindow.setPosition(pos);
             map.setCenter(pos);
 
@@ -128,7 +128,7 @@ function createMarkers(places) {
 
     for (var i = 0, place; place = places[i]; i++) {
 
-        
+
         var marker = new google.maps.Marker({
             map: map,
             title: place.name,
