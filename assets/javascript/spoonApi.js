@@ -11,7 +11,7 @@ $("#recipeSearch").on("click", function (e) {
 
   let search = (search1 + "%2C" + search2 + "%2C" + search3 + "%2C" + search4 + "%2C" + search5);
 
-  let queryUrl = 'https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/random?limitLicense=false&number=1&tags=' + search;
+  let queryUrl = 'https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/random?limitLicense=false&number=9&tags=' + search;
 
   // let queryUrl = "https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/838902/nutritionWidget?defaultCss=true"
   // let queryUrl = "https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/guessNutrition?title=Spaghetti+Aglio+et+Olio"
@@ -32,6 +32,7 @@ $("#recipeSearch").on("click", function (e) {
 
 
       // variables for cards
+      let id = recipes[i].id;
       let recipeTitle = recipes[i].title
       let recipeImage = recipes[i].image;
       let recipeLikes = recipes[i].aggregateLikes;
@@ -41,17 +42,27 @@ $("#recipeSearch").on("click", function (e) {
       //loop for ingredients
       let ingredients = [];
       let ingredientsArr = recipes[i].extendedIngredients;
-      let id = recipes[i].id;
-
       for (let n = 0; n < ingredientsArr.length; n++) {
-        ingredients.push(ingredientsArr[n].name);
+        let name = ingredientsArr[n].name;
+        let amount = ingredientsArr[n].amount;
+        let unit = ingredientsArr[n].unit;
+        ingredients.push(name + ": " + amount + " " + unit);
       }
+      //loop for instructions
+      let instructionList = [];
+      let instructionsArr = recipes[i].analyzedInstructions[0].steps;
+      for (let z = 0; z < instructionsArr.length; z++) {
+        let stepNum = instructionsArr[z].number;
+        let instructNum = instructionsArr[z].step;
+        instructionList.push(instructNum);
+      };
+
       //variables for diets
       let diets = [];
       let dietsArr = recipes[i].diets;
 
       for (let j = 0; j < dietsArr.length; j++) {
-        diets.push(dietsArr[j]);
+        diets.push("  " + dietsArr[j]);
       }
 
       database.ref("/recipeCards/recipe" + number).set({
@@ -61,6 +72,7 @@ $("#recipeSearch").on("click", function (e) {
         time: cookTime,
         instructions: instructions,
         ingredients: ingredients,
+        instructionList: instructionList,
         diets: diets,
         url: url,
         id: id
@@ -71,11 +83,11 @@ $("#recipeSearch").on("click", function (e) {
   });
 });
 
-database.ref("recipeCards").on('value', function (snapshot) {
-
+database.ref("/recipeCards").on('value', function (snapshot) {
 
   for (let i = 1; i < 10; i++) {
     $("#basicModal-" + i).html(snapshot.val()['recipe' + i].title);
+
     $("#recipePic" + i).attr("src", snapshot.val()['recipe' + i].picture);
   }
 });
