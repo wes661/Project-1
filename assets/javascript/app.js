@@ -26,14 +26,14 @@ var newId = 2;
 $("#recipeSearch").on("click", function () {
     search1 = $("#ingredient1").val().trim();
     if (newID = 3) {
-        search2 = $("#ingredient2").val(); 
-    } 
+        search2 = $("#ingredient2").val();
+    }
     if (newID = 4) {
         search3 = $("#ingredient3").val();
-    } 
-    if (newID = 5) { 
+    }
+    if (newID = 5) {
         search4 = $("#ingredient4").val();
-    } 
+    }
     if (newID = 6) {
         var search5 = $("#ingredient5");
     }
@@ -41,12 +41,12 @@ $("#recipeSearch").on("click", function () {
 
 function secondPageLoad() {
 
-    setTimeout(function() {
-        window.location.href='index2.html'
+    setTimeout(function () {
+        window.location.href = 'index2.html'
     }, 3000)
 };
-$(".recipe-btn").on("click", function(){
-    setTimeout(function(){
+$(".recipe-btn").on("click", function () {
+    setTimeout(function () {
         $('div.modal, div.fade, div.bd-example-modal-lg').modal('show');
     }, 1000);
 
@@ -66,52 +66,52 @@ $("#addMore").on("click", function () {
 // Initialize Map //
 var map;
 var infoWindow;
-function generateMap(kw, rad){
+function generateMap(kw, rad) {
     console.log('running');
     infoWindow = new google.maps.InfoWindow;
     if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(function(position) {
-        var pyrmont = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
-        var pos = {
-            lat: position.coords.latitude,
-            lng: position.coords.longitude
-        };
+        navigator.geolocation.getCurrentPosition(function (position) {
+            var pyrmont = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
+            var pos = {
+                lat: position.coords.latitude,
+                lng: position.coords.longitude
+            };
 
-        infoWindow.setPosition(pos);
-        infoWindow.setContent('Your Location.');
-        infoWindow.open(map);
-        map.setCenter(pos);
+            infoWindow.setPosition(pos);
+            infoWindow.setContent('Your Location.');
+            infoWindow.open(map);
+            map.setCenter(pos);
 
-        var request = {
-            location: pyrmont,
-            radius: rad,
-            keyword: kw
-        };
-        service = new google.maps.places.PlacesService(map);
-        service.nearbySearch(request, callback);
-        }, function() {
-        handleLocationError(true, infoWindow, map.getCenter());
+            var request = {
+                location: pyrmont,
+                radius: rad,
+                keyword: kw
+            };
+            service = new google.maps.places.PlacesService(map);
+            service.nearbySearch(request, callback);
+        }, function () {
+            handleLocationError(true, infoWindow, map.getCenter());
         });
     } else {
         // Browser doesn't support Geolocation
         handleLocationError(false, infoWindow, map.getCenter());
     }
 }
-    function initMap() {
-        map = new google.maps.Map(document.getElementById('map'), {
-        center: {lat: 32.2217, lng: -110.9265},
+function initMap() {
+    map = new google.maps.Map(document.getElementById('map'), {
+        center: { lat: 32.2217, lng: -110.9265 },
         zoom: 10
-        });
+    });
 }
-    
+
 function handleLocationError(browserHasGeolocation, infoWindow, pos) {
     infoWindow.setPosition(pos);
     infoWindow.setContent(browserHasGeolocation ?
-                            'Error: The Geolocation service failed.' :
-                            'Error: Your browser doesn\'t support geolocation.');
+        'Error: The Geolocation service failed.' :
+        'Error: Your browser doesn\'t support geolocation.');
     infoWindow.open(map);
-}    
-    
+}
+
 function callback(results, status) {
     console.log("Running");
     if (status == google.maps.places.PlacesServiceStatus.OK) {
@@ -123,15 +123,15 @@ function createMarkers(places) {
     var bounds = new google.maps.LatLngBounds();
 
     for (var i = 0, place; place = places[i]; i++) {
-    
-    var iconBase = 'https://maps.google.com/mapfiles/kml/shapes/';
-    var marker = new google.maps.Marker({
-        map: map,
-        title: place.name,
-        position: place.geometry.location 
-    });
 
-    bounds.extend(place.geometry.location);
+        var iconBase = 'https://maps.google.com/mapfiles/kml/shapes/';
+        var marker = new google.maps.Marker({
+            map: map,
+            title: place.name,
+            position: place.geometry.location
+        });
+
+        bounds.extend(place.geometry.location);
     }
     map.fitBounds(bounds);
 }
@@ -139,13 +139,13 @@ function createMarkers(places) {
 
 
 //Get user location and radius of stores    
-$(document).ready(function(){
+$(document).ready(function () {
 
-    $('#mapBtn').on('click', function(){
+    $('#mapBtn').on('click', function () {
         $("#map").slideDown(2000);
         var rad = 4828.03;
-        if($('#miles').val() != 0){
-            rad = $('#miles').val()*1609.34;
+        if ($('#miles').val() != 0) {
+            rad = $('#miles').val() * 1609.34;
         }
         generateMap(['grocery', 'store'], rad);
     })

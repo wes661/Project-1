@@ -3,42 +3,25 @@ $(".recipe-btn").on("click", function () {
     var j = idArr[idArr.length - 1];
     //console.log(idArr);
     database.ref('recipeCards/recipe' + j).once('value', function (data) {
+        $("#list").empty();
 
-        let modalCard = $("<div>");
-        modalCard.addClass("card text-center");
-
-        let modalHeader = $("<div>");
-        modalHeader.addClass("card-header");
-        modalHeader.html("<h2>" + data.val().title);
-        modalCard.append(modalHeader);
-
-        let row = $('<div>');
-        row.addClass("row");
-
-
-        let modalImage = $("<img>");
-        modalImage.addClass("img-fluid col-8");
-        modalImage.attr("src", data.val().picture);
-        row.append(modalImage);
-
-        let modalingredients = $("<p>");
-        modalingredients.addClass("col-4");
-        modalingredients.text(data.val().ingredients);
-        row.append(modalingredients);
-
-        modalCard.append(row);
-
-        let modalBody = $("<div>");
-        modalBody.addClass("card-body");
-        modalCard.append(modalBody);
-
-        let modalInstructions = $("<p>");
-        modalInstructions.text(data.val().instructions);
-        modalBody.append(modalInstructions);
+        $("#title").html(data.val().title);
+        $("#likes").text(data.val().likes);
+        $("#time").text(data.val().time);
+        $("#diets").text(data.val().diets);
+        $("#image").attr("src", data.val().picture);
+        $("#instructions").text(data.val().instructions);
+        let modalUrl = $("<a>Official Recipe</a>");
+        modalUrl.attr("href", data.val().url);
+        $("#url").html(modalUrl);
 
 
-        $("#modal-body").html(modalCard);
-
-
+        for (let i = 0; i < data.val().ingredients.length; i++) {
+            let ul = $("<ul>");
+            let li = $("<li>");
+            li.text(data.val().ingredients[i]);
+            ul.append(li);
+            $("#list").append(ul);
+        };
     });
 });
