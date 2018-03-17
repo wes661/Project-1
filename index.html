@@ -28,18 +28,18 @@
 
 <body>
   <header>
-    <div class="container auth" id="auth">
-      <input type="email" id="txtEmail" placeholder="Email" class="hide">
+    <div class="login">
+      <input type="email" id="txtEmail" placeholder="Email" class="hide email1">
 
-      <input type="password" id="txtPassword" placeholder="Password" class="hide">
+      <input type="password" id="txtPassword" placeholder="Password" class="hide password1">
 
-      <button class="btn btn-success" id="btnLogin">
+      <button class="btn btn-dark loginBtn1" id="btnLogin">
         Log In
       </button>
-      <button class="btn btn-info" id="btnSignUp">
+      <button class="btn btn-dark signupBtn1" id="btnSignUp">
         Sign Up
       </button>
-      <button class="btn btn-danger hide" id="btnLogout">
+      <button class="btn btn-dark hide logoutBtn1" id="btnLogout">
         Log Out
       </button>
       <br>
@@ -50,9 +50,8 @@
     <div class="overlay animated lightSpeedIn">
       <h1 class="">Quick Bytes</h1>
     </div>
-
+    </div>
   </header>
-
   <!-- main carousel -->
   <div class="input-group mainSearch">
     <input type="text" class="form-control" id="ingredient1" placeholder="Enter Ingredient">

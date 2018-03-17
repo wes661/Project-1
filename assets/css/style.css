@@ -59,7 +59,7 @@ header {
 	background-attachment: fixed;
 	position: relative;
 	overflow: hidden;
-    border-radius: 0 0 85% 85% / 30%;
+    /* border-radius: 0 0 85% 85% / 30%; */
     margin-bottom: -175px !important;
 }
 header .overlay{
@@ -144,7 +144,9 @@ div.modal-header {
 }
 div.modal-body {
     border: 0.5px solid black;
-    height: auto;
+    height: 600px;
+    overflow-y: scroll;
+   
 } 
 
 div.modal-footer {
@@ -172,7 +174,8 @@ div.modal-footer {
     position: absolute;
     box-shadow: 0 32px 32px 0 rgba(0, 0, 0, 0.801), 0 6px 20px 0 rgba(0, 0, 0, 0.623);
     right: 15px;
-    margin-top: -20px !important;
+    margin-top: -45px !important;
+    margin-bottom: 20px;
 }
 .secondSearch {
     margin-top: -30px !important;
@@ -233,7 +236,44 @@ div.modal-footer {
         left: 10%;
         margin:auto;
         max-width: 80%;
-}
+    } 
+    #txtEmail.email2 {
+        position: absolute;
+        box-shadow: 0 32px 32px 0 rgba(0, 0, 0, 0.801), 0 6px 20px 0 rgba(0, 0, 0, 0.623);
+        left: 10px !important;
+        top: 50px;
+    }
+    #txtPassword.password2 {
+        position: absolute;
+        box-shadow: 0 32px 32px 0 rgba(0, 0, 0, 0.801), 0 6px 20px 0 rgba(0, 0, 0, 0.623);
+        left: 200px;
+        top: 50px;
+    }
+    .loginBtn1 {
+        position: fixed;
+        bottom: 10px;
+        right:110px;
+    }
+    .signupBtn1 {
+        position: fixed;
+        bottom: 10px;
+        right:10px;   
+    }
+    #txtEmail.email1 {
+        position: fixed;
+        bottom: 100px;
+        right:10px;
+        
+    }
+    #txtPassword.password1 {
+        position: fixed;
+        bottom: 60px;
+        right:10px;
+    }
+    h5.modal-title {
+        font-size: 4em;
+        margin-bottom: -90px !important;
+    }
 }
 .modal-content{ 
    background: url("../images/wallpaper.png"); 
@@ -270,10 +310,69 @@ div.modal-footer {
     font-size: 1.25em;
     font-family: 'Tinos', serif;
 }
-#auth {
-    position: relative;
-    top: 10%;
-    left: 30%;
+.loginBtn2 {
+    position: absolute;
+    box-shadow: 0 32px 32px 0 rgba(0, 0, 0, 0.801), 0 6px 20px 0 rgba(0, 0, 0, 0.623);
+    left: 10px;
+    margin-top: -20px !important;
+    margin-bottom: 20px;
+}
+.signupBtn2 {
+    position: absolute;
+    box-shadow: 0 32px 32px 0 rgba(0, 0, 0, 0.801), 0 6px 20px 0 rgba(0, 0, 0, 0.623);
+    left: 100px;
+    margin-top: -20px !important;
+    margin-bottom: 20px;
+}
+.loginBtn1{
+    box-shadow: 0 32px 32px 0 rgba(0, 0, 0, 0.801), 0 6px 20px 0 rgba(0, 0, 0, 0.623);
+}
+.signupBtn1{
+    box-shadow: 0 32px 32px 0 rgba(0, 0, 0, 0.801), 0 6px 20px 0 rgba(0, 0, 0, 0.623);
+}
+.email2 {
+    position: absolute;
+    box-shadow: 0 32px 32px 0 rgba(0, 0, 0, 0.801), 0 6px 20px 0 rgba(0, 0, 0, 0.623);
+    left: 200px;
+    margin-top: -15px !important;
+    margin-bottom: 20px;
+}
+.password2 {
+    position: absolute;
+    box-shadow: 0 32px 32px 0 rgba(0, 0, 0, 0.801), 0 6px 20px 0 rgba(0, 0, 0, 0.623);
+    left: 380px;
+    margin-top: -15px !important;
+    margin-bottom: 20px;
+}
+.email1 { 
+    box-shadow: 0 32px 32px 0 rgba(0, 0, 0, 0.801), 0 6px 20px 0 rgba(0, 0, 0, 0.623);
+
+}
+.password1 {
+    box-shadow: 0 32px 32px 0 rgba(0, 0, 0, 0.801), 0 6px 20px 0 rgba(0, 0, 0, 0.623);
+
+}
+.login {
+    position: absolute;
+    top: 130px !important;
+    right: 145px;
+    z-index: 3;
+}
+.logoutBtn2 {
+    margin-top: -25px !important;
+     box-shadow: 0 32px 32px 0 rgba(0, 0, 0, 0.801), 0 6px 20px 0 rgba(0, 0, 0, 0.623);
+}
+.logoutBtn1 {
+         box-shadow: 0 32px 32px 0 rgba(0, 0, 0, 0.801), 0 6px 20px 0 rgba(0, 0, 0, 0.623);
+}
+.modal-title {
+    font-family: 'Dancing Script', cursive !important;
+    color: white;
+    font-size: 9em;
+    text-shadow: 0 20px 20px #050505;
+    margin-top: -90px;
+    margin-bottom: -30px !important;
+
 }
 /* .hide {
     visibility: hidden;
