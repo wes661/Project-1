@@ -48,7 +48,7 @@ function secondPageLoad() {
 $(".recipe-btn").on("click", function () {
     setTimeout(function () {
         $('div.modal, div.fade, div.bd-example-modal-lg').modal('show');
-    }, 1000);
+    }, 500);
 
 })
 function loading() {
@@ -67,19 +67,24 @@ $("#addMore").on("click", function () {
 var map;
 var infoWindow;
 function generateMap(kw, rad) {
-    console.log('running');
     infoWindow = new google.maps.InfoWindow;
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(function (position) {
             var pyrmont = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
             var pos = {
                 lat: position.coords.latitude,
-                lng: position.coords.longitude
+                lng: position.coords.longitude,
             };
-
+            var marker = new google.maps.Marker({
+                map: map,
+                position: pos,
+                icon: {
+                    url: "assets/images/your-loc.png",
+                    scaledSize: new google.maps.Size(48, 48)
+                }
+            });
+            
             infoWindow.setPosition(pos);
-            infoWindow.setContent('Your Location.');
-            infoWindow.open(map);
             map.setCenter(pos);
 
             var request = {
@@ -100,7 +105,7 @@ function generateMap(kw, rad) {
 function initMap() {
     map = new google.maps.Map(document.getElementById('map'), {
         center: { lat: 32.2217, lng: -110.9265 },
-        zoom: 10
+        zoom: 9,
     });
 }
 
@@ -113,7 +118,6 @@ function handleLocationError(browserHasGeolocation, infoWindow, pos) {
 }
 
 function callback(results, status) {
-    console.log("Running");
     if (status == google.maps.places.PlacesServiceStatus.OK) {
         createMarkers(results);
     }
@@ -124,11 +128,15 @@ function createMarkers(places) {
 
     for (var i = 0, place; place = places[i]; i++) {
 
-        var iconBase = 'https://maps.google.com/mapfiles/kml/shapes/';
+        
         var marker = new google.maps.Marker({
             map: map,
             title: place.name,
-            position: place.geometry.location
+            position: place.geometry.location,
+            icon: {
+                url: "assets/images/Basket_5.png",
+                scaledSize: new google.maps.Size(48, 48)
+            }
         });
 
         bounds.extend(place.geometry.location);
