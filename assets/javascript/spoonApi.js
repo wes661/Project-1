@@ -26,7 +26,7 @@ $("#recipeSearch").on("click", function (e) {
     console.log(response);
 
     let recipes = response.recipes;
-    let number = 1
+    let number = 1;
 
     for (let i = 0; i < response.recipes.length; i++) {
 
