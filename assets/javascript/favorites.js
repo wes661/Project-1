@@ -49,17 +49,41 @@ function populateFavoritesView() {
 }
 
 $(document).on('click', '.fav-recipe-btn', function () {
+    $('#favsInfo').slideDown('slow');
     $('#favoritesRecipeDisplay').html();
     var favIndex = $(this).attr('id').replace('favRecipe', '');
     console.log(favorites[favIndex]);
+    $("#list1").empty();
+    $("#title1").html(favorites[favIndex].title);
+    $("#likes1").text(favorites[favIndex].likes);
+    $("#time1").text(favorites[favIndex].time);
+    $("#diets1").text(favorites[favIndex].diets);
+    $("#image1").attr("src", favorites[favIndex].picture);
+    $("#instructions1").text(favorites[favIndex].instructions);
 
+    let modalUrl = $("<a>Official Recipe</a>");
+    modalUrl.attr("href", favorites[favIndex].url);
+    $("#url1").html(modalUrl);
+
+
+    for (let i = 0; i < favorites[favIndex].ingredients.length; i++) {
+        let ul = $("<ul>");
+        let li = $("<li>");
+        li.text(favorites[favIndex].ingredients[i]);
+        ul.append(li);
+        $("#list1").append(ul);
+    };
+
+    let ol = $("<ol>");
+    for (let x = 0; x < favorites[favIndex].instructionList.length; x++) {
+        let li = $("<li>");
+        li.append(favorites[favIndex].instructionList[x]);
+        ol.append(li);
+    };
+
+    $("#instructionList1").append(ol);
 })
-/* <div class="card col-12 col-lg-3 card-pad">
-                    <img class="card-img-top" id="recipePic1" alt="">
-                    <div class="card-body">
-                        <a href="#!" class="btn btn-primary recipe-btn truncate" data-target=".bd-example-modal-lg" id="basicModal-1"></a>
-                    </div>
-                </div> */
+
 
 
 
