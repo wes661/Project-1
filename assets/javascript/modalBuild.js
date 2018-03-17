@@ -2,8 +2,9 @@ $(".recipe-btn").on("click", function () {
     var idArr = $(this).attr('id').split('');
     var j = idArr[idArr.length - 1];
     //console.log(idArr);
-    database.ref('recipeCards/recipe' + j).once('value', function (data) {
+    database.ref(key + '/recipeCards/recipe' + j).once('value', function (data) {
         $("#list").empty();
+        $("#instructionList").empty();
         $("#title").html(data.val().title);
         $("#likes").text(data.val().likes);
         $("#time").text(data.val().time);

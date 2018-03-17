@@ -33,9 +33,9 @@ database.ref("favorites").on("value", function (snapshot) {
 });
 
 function populateFavoritesView() {
-    var row = $('<div classs="row text-center inner2 ">');
+    var row = $('<div classs="row text-center inner2">');
     for (var i = 0; i < favorites.length; i++) {
-        var card = $('<div class="card col-12 col-lg-3 card-pad">');
+        var card = $('<div class="card col-12 col-lg-3 m-4 card-pad favoritesCard">');
         var cardImage = $('<img class="card-img-top" src="' + favorites[i].picture + '" alt="Food Image">')
         var cardBody = $('<div class="card-body">');
         var cardButton = $('<a href="#!" class="btn btn-primary fav-recipe-btn truncate" id="favRecipe' + i + '">' + favorites[i].title + '</a>');
