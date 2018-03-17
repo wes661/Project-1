@@ -59,7 +59,7 @@ header {
 	background-attachment: fixed;
 	position: relative;
 	overflow: hidden;
-    /* border-radius: 0 0 85% 85% / 30%; */
+   /* border-radius: 0 0 85% 85% / 30%;*/
     margin-bottom: -175px !important;
 }
 header .overlay{
@@ -111,7 +111,7 @@ h1 {
     box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.801), 0 6px 20px 0 rgba(0, 0, 0, 0.623);
     
 }
-.recipe-btn {
+.recipe-btn, .fav-recipe-btn {
     width: 100%;
     background-color: rgba(51, 51, 51, 0.815) !important;
     position: absolute;
@@ -195,7 +195,7 @@ div.modal-footer {
     left: 83%;
     font-size: .3em;
 }
-#addFav{
+.addFav{
     color: gold;
     font-size: 30px;
     position: absolute;
@@ -203,12 +203,12 @@ div.modal-footer {
     left: 86%;
     text-shadow: 5px 5px 5px black;
 }
-#addFav:hover{
+.addFav:hover{
     cursor: pointer;
     font-size: 40px;
 }
 
-#addFav:hover .tooltipfav{
+.addFav:hover .tooltipfav{
     visibility: visible;
 }
 
