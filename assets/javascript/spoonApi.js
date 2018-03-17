@@ -52,7 +52,6 @@ $("#recipeSearch").on("click", function (e) {
       let instructionList = [];
       let instructionsArr = recipes[i].analyzedInstructions[0].steps;
       for (let z = 0; z < instructionsArr.length; z++) {
-        let stepNum = instructionsArr[z].number;
         let instructNum = instructionsArr[z].step;
         instructionList.push(instructNum);
       };
