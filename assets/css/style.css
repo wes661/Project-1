@@ -28,7 +28,7 @@ h1 {
 }
 .mainSearch {
     position: absolute !important;
-    top: 55%;
+    top: 50%;
     left: 10%;
     margin:auto;
     max-width: 80%;
@@ -124,7 +124,7 @@ h1 {
     padding: 0;
 }
 .card-img-top {
-    border: 5px solid  rgba(51, 51, 51, 0.815)ck;
+    border: 5px solid  rgba(51, 51, 51, 0.815);
     border-radius: 20px !important;
 }
 .mainCard{
@@ -216,11 +216,16 @@ div.modal-footer {
 .favBtn {
     box-shadow: 0 22px 22px 0 rgba(0, 0, 0, 0.801), 0 6px 20px 0 rgba(0, 0, 0, 0.623);
     position: absolute !important;
-    top: 61%;
+    top: 56%;
     left: 10%;
     margin:auto;
     border-radius: 5px;
 }
+
+.favoritesCard{
+    display: inline-flex !important;
+}
+
 @media only screen and (max-width: 600px) {
     .favBtn {
         box-shadow: 0 22px 22px 0 rgba(0, 0, 0, 0.801), 0 6px 20px 0 rgba(0, 0, 0, 0.623);
@@ -278,10 +283,10 @@ div.modal-footer {
 .modal-content{ 
    background: url("../images/wallpaper.png"); 
 }
-.favoriteText{
+h5.modal-title.favoriteText{
     font-family: 'Dancing Script', cursive !important;
     color: white;
-    font-size: 4em;
+    font-size: 4.5em;
     text-shadow: 0 20px 20px #050505;
     padding-left:25%;
 }
@@ -372,7 +377,6 @@ div.modal-footer {
     text-shadow: 0 20px 20px #050505;
     margin-top: -90px;
     margin-bottom: -30px !important;
-
 }
 /* .hide {
     visibility: hidden;
