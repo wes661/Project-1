@@ -28,26 +28,8 @@
     <title>Quick Bytes</title>
 </head>
 
-<body>
-    <div class="container auth" id="auth">
-        <input type="email" id="txtEmail" placeholder="Email" class="hide">
-
-        <input type="password" id="txtPassword" placeholder="Password" class="hide">
-
-        <button class="btn btn-success" id="btnLogin">
-            Log In
-        </button>
-        <button class="btn btn-info" id="btnSignUp">
-            Sign Up
-        </button>
-        <button class="btn btn-danger hide" id="btnLogout">
-            Log Out
-        </button>
-        <br>
-        <button class="btn btn-warning hide" id="btnAnony">
-            Sign In Anonymously
-        </button>
-    </div>
+<body>   
+     
     <div class="container wrapper">
         <div class="input-group secondSearch">
             <input type="text" class="form-control col-xs-8" id="ingredient1" placeholder="Enter New Ingredients">
@@ -153,7 +135,23 @@
         </div>
     </div>
     <div class="container">
-
+        <input type="email" id="txtEmail" placeholder="Email" class="email2">
+        
+        <input type="password" id="txtPassword" placeholder="Password" class="password2">
+        
+        <button class="btn btn-dark loginBtn2" id="btnLogin">
+            Log In
+        </button>
+        <button class="btn btn-dark signupBtn2" id="btnSignUp">
+            Sign Up
+        </button>
+        <button class="btn btn-dark hide logoutBtn2" id="btnLogout">
+            Log Out
+        </button>
+        <br>
+        <button class="btn btn-warning hide" id="btnAnony">
+            Sign In Anonymously
+        </button>
         <button class="btn btn-dark moreResults" id="moreResults" onclick="secondPageLoad();loading();" type="button">More Results
             <i class="fa fa-spinner" id="spin"> </i>
         </button>
@@ -168,7 +166,7 @@
         <div class="modal-dialog modal-lg">
             <div class="modal-content animated rollIn">
                 <div class="modal-header">
-                    <h5 class="modal-title"></h5>
+                    <h5 class="modal-title">Quick Bytes</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
