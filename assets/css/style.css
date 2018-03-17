@@ -229,10 +229,16 @@ div.modal-footer {
     border-radius: 5px;
 }
 
+<<<<<<< Updated upstream
 .favoritesCard{
     display: inline-flex !important;
 }
 
+=======
+#favsInfo{
+   display: none; 
+}
+>>>>>>> Stashed changes
 @media only screen and (max-width: 600px) {
     .favBtn {
         box-shadow: 0 22px 22px 0 rgba(0, 0, 0, 0.801), 0 6px 20px 0 rgba(0, 0, 0, 0.623);
