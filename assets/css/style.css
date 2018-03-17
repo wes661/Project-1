@@ -193,11 +193,11 @@ div.modal-footer {
     font-size: .3em;
 }
 #addFav{
-    color: red;
+    color: gold;
     font-size: 30px;
     position: absolute;
     bottom: 75%;
-    left: 90%;
+    left: 86%;
     text-shadow: 5px 5px 5px black;
 }
 #addFav:hover{
@@ -233,7 +233,6 @@ div.modal-footer {
         left: 10%;
         margin:auto;
         max-width: 80%;
-        
 }
 }
 .modal-content{ 
@@ -246,3 +245,36 @@ div.modal-footer {
     text-shadow: 0 20px 20px #050505;
     padding-left:25%;
 }
+#modal-image{
+    float: left;
+    margin-bottom: 15px;
+}
+#list {
+    float: right;
+}
+
+.modal-text {
+    color: #333;
+
+}
+#title {
+    font-family: 'Abril Fatface', cursive;
+}
+#list, #instructions, #css-likes {
+    font-family: 'Tinos', serif;
+}
+#instructions {
+    clear: left;
+}
+#cook-time,  #diets{
+    font-size: 1.25em;
+    font-family: 'Tinos', serif;
+}
+#auth {
+    position: relative;
+    top: 10%;
+    left: 30%;
+}
+/* .hide {
+    visibility: hidden;
+} */
