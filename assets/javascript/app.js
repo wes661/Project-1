@@ -38,7 +38,9 @@ $("#recipeSearch").on("click", function () {
         var search5 = $("#ingredient5");
     }
 });
-
+function homeLoad() {
+    window.location.href = 'index.html'
+}
 function secondPageLoad() {
 
     setTimeout(function () {

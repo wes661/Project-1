@@ -177,6 +177,13 @@ div.modal-footer {
     margin-top: -45px !important;
     margin-bottom: 20px;
 }
+.homeBtn {
+    position: absolute;
+    box-shadow: 0 32px 32px 0 rgba(0, 0, 0, 0.801), 0 6px 20px 0 rgba(0, 0, 0, 0.623);
+    right: 15px;
+    margin-top: -45px !important;
+    margin-bottom: 20px;
+}
 .secondSearch {
     margin-top: -30px !important;
 }
@@ -278,6 +285,13 @@ div.modal-footer {
     h5.modal-title {
         font-size: 4em;
         margin-bottom: -90px !important;
+    }
+    .homeBtn {
+    position: absolute;
+    box-shadow: 0 32px 32px 0 rgba(0, 0, 0, 0.801), 0 6px 20px 0 rgba(0, 0, 0, 0.623);
+    right: 15px;
+    margin-top: -45px !important;
+    margin-bottom: 20px;
     }
 }
 .modal-content{ 
