@@ -52,6 +52,7 @@ $(document).on('click', '.fav-recipe-btn', function () {
     $('#favoritesRecipeDisplay').html();
     var favIndex = $(this).attr('id').replace('favRecipe', '');
     console.log(favorites[favIndex]);
+
 })
 /* <div class="card col-12 col-lg-3 card-pad">
                     <img class="card-img-top" id="recipePic1" alt="">
