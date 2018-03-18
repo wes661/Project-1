@@ -133,11 +133,24 @@
             <div id="instructionList1" class="text-center-left"></div>
             <hr>
             <div id="url1"></div>
+            <div class="modal-footer storeFind center">
+
+              <label for="miles1" id="getStores1" class="searchStores">Missing ingredients? Search stores within
+                  <input id="miles1" type="number">miles
+                  <button type="button" id="mapBtn1" class="btn btn-dark btn-sm ">
+                      <center>Go</center>
+                  </button>
+              </label>
+            </div>
+            <div class="modal-footer">
+              <div id="map1"></div>
+          </div>
+            
         </div>
+        
     </div>
         </div>
       </div>
-
     </div>
   </div>
 
@@ -157,6 +170,8 @@
     crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"
     crossorigin="anonymous"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCtR9jBUO3uHdJanJp28hI5S6YpZsWl02U&libraries=places&callback=initMap1"
+        async defer></script>
   <!-- local js file Link -->
   <!-- <script src="assets/javascript/auth.js"></script> -->
 
