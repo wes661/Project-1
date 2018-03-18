@@ -110,6 +110,12 @@ function initMap() {
         zoom: 9,
     });
 }
+function initMap1() {
+    map = new google.maps.Map(document.getElementById('map1'), {
+        center: { lat: 32.2217, lng: -110.9265 },
+        zoom: 9,
+    });
+}
 
 function handleLocationError(browserHasGeolocation, infoWindow, pos) {
     infoWindow.setPosition(pos);
@@ -156,6 +162,17 @@ $(document).ready(function () {
         var rad = 4828.03;
         if ($('#miles').val() != 0) {
             rad = $('#miles').val() * 1609.34;
+        }
+        generateMap(['grocery', 'store'], rad);
+    })
+})
+$(document).ready(function () {
+
+    $('#mapBtn1').on('click', function () {
+        $("#map1").slideDown(2000);
+        var rad = 4828.03;
+        if ($('#miles1').val() != 0) {
+            rad = $('#miles1').val() * 1609.34;
         }
         generateMap(['grocery', 'store'], rad);
     })

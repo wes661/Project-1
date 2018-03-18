@@ -70,7 +70,7 @@ $(document).on('click', '.fav-recipe-btn', function () {
         let ul = $("<ul>");
         let li = $("<li>");
         li.text(favorites[favIndex].ingredients[i]);
-        ul.append(li);
+        ul.html(li);
         $("#list1").append(ul);
     };
 
@@ -81,7 +81,7 @@ $(document).on('click', '.fav-recipe-btn', function () {
         ol.append(li);
     };
 
-    $("#instructionList1").append(ol);
+    $("#instructionList1").html(ol);
 })
 
 
