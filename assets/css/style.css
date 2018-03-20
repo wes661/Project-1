@@ -371,7 +371,7 @@ h5.modal-title.favoriteText{
     float: left;
     margin-bottom: 15px;
 }
-#list {
+#list, #list1 {
     float: right;
 }
 
@@ -379,16 +379,16 @@ h5.modal-title.favoriteText{
     color: #333;
 
 }
-#title {
+#title, #title1{
     font-family: 'Abril Fatface', cursive;
 }
-#list, #instructions, #css-likes {
+#list, #css-likes, #list1, {
     font-family: 'Tinos', serif;
 }
-#instructionList {
+#instructionList, #instructionList1 {
     clear: left;
 }
-#cook-time,  #diets{
+#cook-time,  #diets, #diets1{
     font-size: 1.25em;
     font-family: 'Tinos', serif;
 }
