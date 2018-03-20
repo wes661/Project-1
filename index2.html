@@ -139,19 +139,10 @@
 
         <input type="password" id="txtPassword" placeholder="Password" class="password2">
 
-        <button class="btn btn-dark loginBtn2" id="btnLogin">
-            Log In
-        </button>
-        <button class="btn btn-dark signupBtn2" id="btnSignUp">
-            Sign Up
-        </button>
-        <button class="btn btn-dark hide logoutBtn2" id="btnLogout">
+        <button class="btn btn-dark hide logoutBtn2" onclick="homeLoad();" id="btnLogout">
             Log Out
         </button>
         <br>
-        <button class="btn btn-warning hide" id="btnAnony">
-            Sign In Anonymously
-        </button>
     </div>
     <div class="container">
         <button class="btn btn-dark homeBtn" onclick="homeLoad();" type="button">Home</button>
@@ -199,10 +190,10 @@
                         <div id="instructions" class="text-center-left"></div>
                         <hr>
                         <div id="instructionList" class="text-center-left"></div>
-                        <hr>
                         <div id="url"></div>
                     </div>
                 </div>
+                <br>
                 <div class="modal-footer storeFind center">
 
                     <label for="miles" id="getStores" class="searchStores">Missing ingredients? Search stores within
