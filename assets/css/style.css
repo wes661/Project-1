@@ -288,6 +288,13 @@ div.modal-footer {
         font-size: 4em;
         margin-bottom: -90px !important;
     }
+    h5.modal-title.favoriteText {
+    font-size: 3em !important;
+    margin-bottom: -90px !important;
+    }
+    .card.favoritesCard {
+        margin-left: -2px !important;
+    }
     .homeBtn {
         position: absolute;
         box-shadow: 0 32px 32px 0 rgba(0, 0, 0, 0.801), 0 6px 20px 0 rgba(0, 0, 0, 0.623);
@@ -447,6 +454,24 @@ h5.modal-title.favoriteText{
     text-shadow: 0 20px 20px #050505;
     margin-top: -90px;
     margin-bottom: -30px !important;
+}
+.loginError {
+    text-align: center;
+    font-size: 1.5em;
+}
+#loginModal {
+    position: absolute;
+    top: 40%;
+    color: white;
+}
+.loginErrorImg {
+    margin-left:44%;
+}
+.close {
+    margin-left: 90%;
+}
+.closeLogin {
+    font-size: 1.5em;
 }
 /* .hide {
     visibility: hidden;

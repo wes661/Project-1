@@ -48,7 +48,7 @@
       </button>
     </div>
     <div class="overlay animated lightSpeedIn">
-      <h1 class="">Quick Bytes</h1>
+      <h1 class="pageTitle">Quick Bytes</h1>
     </div>
 
   </header>
@@ -61,7 +61,7 @@
       <span class="plus">&#43;</span>
     </button>
     <div class="input-group-append">
-      <button class="btn btn-dark" id="recipeSearch" onclick="secondPageLoad();loading();" type="button">Find Receipes
+      <button class="btn btn-dark" id="recipeSearch" onclick="secondPageLoad();" type="button">Find Receipes
         <i class="fa fa-spinner" id="spin"> </i>
       </button>
     </div>
@@ -153,13 +153,18 @@
       </div>
     </div>
   </div>
-
-  <!-- footer with copyright info
-  <footer class="footer">
-    <div class="container">
-      <span class="text-muted">&#169 Patrick Marrin, Joey Bridges, Corey Richard, Wesley Hanson - 2018</span>
+<!-- Login Modal -->
+<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span class="closeLogin" aria-hidden="true">&times;</span>
+        </button>
+        <img src="assets/images/login.png" class="loginErrorImg" alt="login Error" height="50px" width="60px">
+        <span class="loginError">Please Login or Register to view Receipes</span>
     </div>
-  </footer> -->
+  </div>
+</div>
   <!-- Jquery Link -->
   <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
   <!-- bootstrap js -->
