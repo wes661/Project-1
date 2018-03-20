@@ -448,6 +448,24 @@ h5.modal-title.favoriteText{
     margin-top: -90px;
     margin-bottom: -30px !important;
 }
+.loginError {
+    text-align: center;
+    font-size: 1.5em;
+}
+#loginModal {
+    position: absolute;
+    top: 40%;
+    color: white;
+}
+.loginErrorImg {
+    margin-left:44%;
+}
+.close {
+    margin-left: 90%;
+}
+.closeLogin {
+    font-size: 1.5em;
+}
 /* .hide {
     visibility: hidden;
 } */

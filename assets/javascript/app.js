@@ -41,22 +41,12 @@ $("#recipeSearch").on("click", function () {
 function homeLoad() {
     window.location.href = 'index.html'
 }
-function secondPageLoad() {
-
-    setTimeout(function () {
-        window.location.href = 'index2.html'
-    }, 5000)
-};
 $(".recipe-btn").on("click", function () {
     setTimeout(function () {
         $('div.modal, div.fade, div.bd-example-modal-lg').modal('show');
     }, 500);
 
 })
-function loading() {
-    $("#spin").show();
-    $("#spin").addClass("fa-spin");
-}
 // on click for adding more search fields // 
 $("#addMore").on("click", function () {
     var newForm = $(".input-group");
@@ -152,11 +142,8 @@ function createMarkers(places) {
     map.fitBounds(bounds);
 }
 
-
-
 //Get user location and radius of stores    
 $(document).ready(function () {
-
     $('#mapBtn').on('click', function () {
         $("#map").slideDown(2000);
         var rad = 4828.03;
@@ -177,3 +164,4 @@ $(document).ready(function () {
         generateMap(['grocery', 'store'], rad);
     })
 })
+
