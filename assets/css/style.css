@@ -288,6 +288,13 @@ div.modal-footer {
         font-size: 4em;
         margin-bottom: -90px !important;
     }
+    h5.modal-title.favoriteText {
+    font-size: 3em !important;
+    margin-bottom: -90px !important;
+    }
+    .card.favoritesCard {
+        margin-left: -2px !important;
+    }
     .homeBtn {
         position: absolute;
         box-shadow: 0 32px 32px 0 rgba(0, 0, 0, 0.801), 0 6px 20px 0 rgba(0, 0, 0, 0.623);
