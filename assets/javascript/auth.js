@@ -2,8 +2,6 @@
 const auth = firebase.auth();
 
 let key = "";
-let loggedIn = false;
-
 const txtEmail = document.querySelector("#txtEmail");
 const txtPassword = document.querySelector("#txtPassword");
 const btnLogin = document.querySelector("#btnLogin");
@@ -17,7 +15,6 @@ $("#txtEmail, #txtPassword, #btnAnony, #btnLogout").hide();
 $("#btnLogin").on("click", function () {
     $("#txtEmail, #txtPassword").show();
     signIn();
-    loggedIn = true;
 });
 
 $("#btnSignUp").on("click", function () {
@@ -26,7 +23,7 @@ $("#btnSignUp").on("click", function () {
 });
 
 function secondPageLoad() {
-    if (loggedIn === true) {
+    if (key !=='') {
         $("#spin").show();
         $("#spin").addClass("fa-spin");
         setTimeout(function () {
@@ -84,7 +81,7 @@ function signUp() {
 btnLogout.addEventListener('click', e => {
     auth.signOut();
     $("#btnLogout").hide();
-    loggedIn = false;
+    key = ''
 });
 
 // add a realtime listener
