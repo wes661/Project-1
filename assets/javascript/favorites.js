@@ -59,7 +59,6 @@ $(document).on('click', '.fav-recipe-btn', function () {
     $("#time1").text(favorites[favIndex].time);
     $("#diets1").text(favorites[favIndex].diets);
     $("#image1").attr("src", favorites[favIndex].picture);
-    $("#instructions1").text(favorites[favIndex].instructions);
 
     let modalUrl = $("<a>Official Recipe</a>");
     modalUrl.attr("href", favorites[favIndex].url);
